@@ -1,0 +1,8 @@
+{
+    "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v2/jobs?showDeploymentAttributes=true&page=0&size=2000",
+    "size": 0,
+    "pageNumber": 0,
+    "totalElements": 0,
+    "totalPages": 0,
+    "jobs": []
+}

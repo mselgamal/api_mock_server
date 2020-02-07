@@ -1,0 +1,43 @@
+{
+    "id": "1",
+    "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v1/tenants/1",
+    "name": "MOCK_TENANT",
+    "url": null,
+    "about": null,
+    "contactEmail": null,
+    "phone": null,
+    "userId": null,
+    "termsOfService": null,
+    "privacyPolicy": null,
+    "revShareRate": 0.0,
+    "ccTransactionFeeRate": 0.0,
+    "minAppFeeRate": 0.0,
+    "enableConsolidatedBilling": false,
+    "shortName": "ENTCSP",
+    "enablePurchaseOrder": true,
+    "enableEmailNotificationsToUsers": false,
+    "parentTenantId": null,
+    "externalId": null,
+    "defaultActivationProfileId": null,
+    "enableMonthlyBilling": false,
+    "defaultChargeType": "Hourly",
+    "conversionRate": 1.0,
+    "defaultCurrency": "USD",
+    "loginLogo": "custom/assets/vendors/1/img/logo.png",
+    "homePageLogo": null,
+    "domainName": null,
+    "activationCodes": [],
+    "firewallProfiles": [],
+    "createUserSecurityGroup": false,
+    "allowVmConnection": false,
+    "disableAllEmailNotification": false,
+    "preferences": [
+        {
+            "name": "PASSWORD_MIN_LENGTH",
+            "value": "5"
+        }
+    ],
+    "user": null,
+    "trademarkURL": null,
+    "deleted": false
+}

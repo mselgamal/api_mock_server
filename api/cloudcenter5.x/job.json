@@ -1,0 +1,534 @@
+{
+    "id": "5",
+    "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v2/jobs/5",
+    "name": "test3",
+    "description": "",
+    "status": "JobStopping",
+    "jobStatusMessage": "",
+    "approvalRequestStatus": "",
+    "approvalRequestAction": "",
+    "startTime": "1573027299641",
+    "endTime": "",
+    "estimatedMonthlyCost": 7300.0,
+    "estimatedHourlyCost": 10.0,
+    "estimatedMonthlySavings": 0.0,
+    "policiesSummaries": [],
+    "policySavings": [],
+    "currencyCode": "USD",
+    "addSuspensionPolicy": false,
+    "scheduleEndTime": "",
+    "timeZone": "GMT+05:30",
+    "favoriteCreationTime": "",
+    "cloud": "SVL_cloud-default",
+    "cloudFamily": "Vmware",
+    "cloudDisplayName": "SVL_cloud default",
+    "cloudSettings": {
+        "cloud": "SVL_cloud-default",
+        "FullClone": "false",
+        "CloudFamily": "Vmware",
+        "accountDisplayName": "elarrive",
+        "UserDataCenterName": "CMS_TME_DC02 (SB01)",
+        "CC_AUTO_SELECT_NETWORK": "false",
+        "numNICs": "1",
+        "UserTargetDeploymentFolder": "/CliqrTemplates",
+        "UserClusterName": "CMS_TME_CL01_ACI"
+    },
+    "deploymentEnvironment": {
+        "id": "1",
+        "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v1/environments/1",
+        "properties": []
+    },
+    "application": {
+        "id": "29",
+        "version": "1",
+        "resource": "https://10.199.88.228/cloudcenter-ccm-backendv1/apps/29?version=1",
+        "properties": []
+    },
+    "actions": [
+        "MARK_FAVORITE",
+        "TERMINATE",
+        "TERMINATE_AND_HIDE"
+    ],
+    "hibernateAction": false,
+    "deploymentEntity": {
+        "type": "DEPLOYMENT",
+        "id": "3",
+        "name": "test3",
+        "attributes": {
+            "status": "Stopping",
+            "health": "In Progress",
+            "ownerId": "1",
+            "containsExternalServices": false
+        }
+    },
+    "terminateProtection": false,
+    "hidden": false,
+    "favorite": false,
+    "benchmark": false,
+    "owner": true,
+    "ownerEmailAddress": "admin@cliqrtech.com",
+    "customActions": [],
+    "service": {
+        "id": "",
+        "resource": "",
+        "properties": []
+    },
+    "jobOwner": {
+        "id": "1",
+        "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v1/users/1",
+        "properties": []
+    },
+    "parentJob": {
+        "id": "",
+        "resource": "",
+        "properties": []
+    },
+    "lastUpdatedTime": "1577986518096",
+    "actionHistoryRef": "https://10.199.88.228/cloudcenter-ccm-backend/api/v1/actionHistory?resourceId=5&resourceType=DEPLOYMENT",
+    "bareMetalMachines": [],
+    "vmActionSummaries": [],
+    "jobActionSummaries": [
+        {
+            "managedResourceId": 5,
+            "actionExecutionId": 91,
+            "resourceId": "5",
+            "resourceType": "DEPLOYMENT",
+            "actionName": "Terminate",
+            "status": "TIMEOUT",
+            "result": null,
+            "startTime": 1577986514667
+        }
+    ],
+    "accessLink": null,
+    "parameters": {
+        "cloudParams": {
+            "cloudRegionId": 33,
+            "instance": "",
+            "instanceName": "",
+            "nics": [],
+            "volumes": [],
+            "provisionBareMetal": false,
+            "deploymentIsolationTag": "",
+            "autoCloudAndInstanceSelection": false,
+            "selectionCriteria": "NONE",
+            "accountId": "1",
+            "rootVolumeSize": "",
+            "storage": "",
+            "networkTypeName": "",
+            "containerVolumes": [],
+            "cloudProperties": [
+                {
+                    "name": "cloud",
+                    "value": "SVL_cloud-default"
+                },
+                {
+                    "name": "FullClone",
+                    "value": "false"
+                },
+                {
+                    "name": "CloudFamily",
+                    "value": "Vmware"
+                },
+                {
+                    "name": "accountDisplayName",
+                    "value": "elarrive"
+                },
+                {
+                    "name": "UserDataCenterName",
+                    "value": "CMS_TME_DC02 (SB01)"
+                },
+                {
+                    "name": "CC_AUTO_SELECT_NETWORK",
+                    "value": "false"
+                },
+                {
+                    "name": "numNICs",
+                    "value": "1"
+                },
+                {
+                    "name": "UserTargetDeploymentFolder",
+                    "value": "/CliqrTemplates"
+                },
+                {
+                    "name": "UserClusterName",
+                    "value": "CMS_TME_CL01_ACI"
+                }
+            ]
+        },
+        "containerParams": null,
+        "appParams": [
+            {
+                "name": "appPackage",
+                "value": ""
+            },
+            {
+                "name": "cliqrWebappAccessLink",
+                "value": ""
+            },
+            {
+                "name": "cliqrForceHttpRedirect",
+                "value": "0"
+            },
+            {
+                "name": "SharedStorageMount",
+                "value": "/shared"
+            },
+            {
+                "name": "SharedStorageName",
+                "value": "mystor"
+            },
+            {
+                "name": "OSSVC_HOME",
+                "value": "/usr/local/osmosix/service"
+            },
+            {
+                "name": "cliqrExternalHttpEnabled",
+                "value": "1"
+            },
+            {
+                "name": "jobMinimumNodeCount",
+                "value": "1"
+            },
+            {
+                "name": "cliqrUseCustomCert",
+                "value": "0"
+            },
+            {
+                "name": "launchUserEmail",
+                "value": "admin@cliqrtech.com"
+            },
+            {
+                "name": "launchTenantLoginId",
+                "value": "ENTCSP"
+            },
+            {
+                "name": "cliqrSSLCert",
+                "value": ""
+            },
+            {
+                "name": "cliqrAppTierName",
+                "value": "SJCCentOS1"
+            },
+            {
+                "name": "launchVendorId",
+                "value": "1"
+            },
+            {
+                "name": "pathParamNames_app_29_order_0",
+                "value": "appPackage"
+            },
+            {
+                "name": "cliqrAppType",
+                "value": "n-tier"
+            },
+            {
+                "name": "cliqrSSLKey",
+                "value": ""
+            },
+            {
+                "name": "cliqrExternalNoProtocolEnabled",
+                "value": "0"
+            },
+            {
+                "name": "cliqrExternalHttpsEnabled",
+                "value": "0"
+            },
+            {
+                "name": "launchUserName",
+                "value": "admin@cliqrtech.com"
+            },
+            {
+                "name": "microSegmentation",
+                "value": "0"
+            },
+            {
+                "name": "cliqrAppName",
+                "value": "SJCCentOS1"
+            },
+            {
+                "name": "CliqrDepEnvName",
+                "value": "test51_1"
+            },
+            {
+                "name": "bareMetalMachine",
+                "value": "false"
+            },
+            {
+                "name": "launchVendorName",
+                "value": "ENTCSP"
+            },
+            {
+                "name": "usage_plan_type",
+                "value": "VM_HOUR_SUBSCRIPTION_PLAN"
+            },
+            {
+                "name": "launchUserId",
+                "value": "1"
+            },
+            {
+                "name": "CliqrDepEnvId",
+                "value": "1"
+            },
+            {
+                "name": "launchTenantName",
+                "value": "ENTCSP"
+            },
+            {
+                "name": "cliqrNonStandardPort",
+                "value": ""
+            },
+            {
+                "name": "useNonStandardPort",
+                "value": "0"
+            },
+            {
+                "name": "launchIdent",
+                "value": "{user}admin@cliqrtech.com{group}{vendor}1"
+            },
+            {
+                "name": "NumNodes",
+                "value": "1"
+            }
+        ],
+        "globalParams": [],
+        "tierParams": [],
+        "envParams": [
+            {
+                "name": "appPackage",
+                "value": ""
+            },
+            {
+                "name": "cliqrWebappAccessLink",
+                "value": ""
+            },
+            {
+                "name": "cliqrForceHttpRedirect",
+                "value": "0"
+            },
+            {
+                "name": "JOB_ID",
+                "value": "5"
+            },
+            {
+                "name": "SharedStorageMount",
+                "value": "/shared"
+            },
+            {
+                "name": "SharedStorageName",
+                "value": "mystor"
+            },
+            {
+                "name": "OSSVC_HOME",
+                "value": "/usr/local/osmosix/service"
+            },
+            {
+                "name": "cliqrExternalHttpEnabled",
+                "value": "1"
+            },
+            {
+                "name": "jobMinimumNodeCount",
+                "value": "1"
+            },
+            {
+                "name": "cliqrUseCustomCert",
+                "value": "0"
+            },
+            {
+                "name": "launchUserEmail",
+                "value": "admin@cliqrtech.com"
+            },
+            {
+                "name": "USER_EXTERNAL_ID",
+                "value": ""
+            },
+            {
+                "name": "LAST_NAME",
+                "value": "Unspecified"
+            },
+            {
+                "name": "FIRST_NAME",
+                "value": "Unspecified"
+            },
+            {
+                "name": "launchTenantLoginId",
+                "value": "ENTCSP"
+            },
+            {
+                "name": "JOB_NAME",
+                "value": "test3"
+            },
+            {
+                "name": "OWNER_ID",
+                "value": "1"
+            },
+            {
+                "name": "cliqrSSLCert",
+                "value": ""
+            },
+            {
+                "name": "cliqrAppTierName",
+                "value": "SJCCentOS1"
+            },
+            {
+                "name": "launchVendorId",
+                "value": "1"
+            },
+            {
+                "name": "pathParamNames_app_29_order_0",
+                "value": "appPackage"
+            },
+            {
+                "name": "cliqrAppType",
+                "value": "n-tier"
+            },
+            {
+                "name": "cliqrSSLKey",
+                "value": ""
+            },
+            {
+                "name": "DEPLOYMENT_ENV",
+                "value": "test51_1"
+            },
+            {
+                "name": "cliqrExternalNoProtocolEnabled",
+                "value": "0"
+            },
+            {
+                "name": "cliqrExternalHttpsEnabled",
+                "value": "0"
+            },
+            {
+                "name": "launchUserName",
+                "value": "admin@cliqrtech.com"
+            },
+            {
+                "name": "microSegmentation",
+                "value": "0"
+            },
+            {
+                "name": "cliqrAppName",
+                "value": "SJCCentOS1"
+            },
+            {
+                "name": "CliqrDepEnvName",
+                "value": "test51_1"
+            },
+            {
+                "name": "bareMetalMachine",
+                "value": "false"
+            },
+            {
+                "name": "launchUserId",
+                "value": "1"
+            },
+            {
+                "name": "CliqrDepEnvId",
+                "value": "1"
+            },
+            {
+                "name": "launchTenantName",
+                "value": "ENTCSP"
+            },
+            {
+                "name": "cliqrNonStandardPort",
+                "value": ""
+            },
+            {
+                "name": "useNonStandardPort",
+                "value": "0"
+            },
+            {
+                "name": "launchIdent",
+                "value": "{user}admin@cliqrtech.com{group}{vendor}1"
+            },
+            {
+                "name": "NumNodes",
+                "value": "1"
+            }
+        ],
+        "nodeParams": []
+    },
+    "virtualMachines": [],
+    "k8SDeployment": null,
+    "externalServiceInstance": null,
+    "approvalRequest": {
+        "currentDeploymentEnvironment": {
+            "id": "1",
+            "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v1/environments/1",
+            "properties": []
+        },
+        "fromDeploymentEnvironment": {
+            "id": "",
+            "resource": "",
+            "properties": []
+        },
+        "initiatingUser": {
+            "id": "1",
+            "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v1/users/1",
+            "properties": []
+        },
+        "lastApprovalInitiatingUser": {
+            "id": "",
+            "resource": "",
+            "properties": []
+        },
+        "approvingUser": {
+            "id": "1",
+            "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v1/users/1",
+            "properties": []
+        },
+        "lastApprovalAction": "",
+        "approvalCategory": "",
+        "requestTime": "1573027296121",
+        "approvalTime": "1573027296121",
+        "status": "AUTO_APPROVED",
+        "message": "Auto-Approved"
+    },
+    "numTotalTiers": 1,
+    "nodeStateSummary": {
+        "NodeReady": 0,
+        "NodeStarting": 0,
+        "NodeTerminating": 0,
+        "NodeResuming": 0,
+        "NodeBooting": 0,
+        "NodeLaunching": 0,
+        "NodeSuspending": 0,
+        "NodeSuspended": 0,
+        "NodeReachable": 0,
+        "NodeResumed": 0,
+        "NodeError": 0,
+        "NodeTerminated": 1,
+        "NodeNotReachable": 0,
+        "NodeNotFound": 0,
+        "NodeStarted": 0,
+        "NodeCleaned": 0,
+        "NodeBootingFailed": 0
+    },
+    "childJobStatusSummary": {
+    },
+    "replicaStateSummary": {
+        "ERROR": 0,
+        "STARTING": 0,
+        "RUNNING": 0,
+        "TERMINATED": 0
+    },
+    "childJobs": [
+    ],
+    "tags": [],
+    "policies": {},
+    "securityProfiles": [],
+    "windowsJob": false,
+    "scalable": false,
+    "referredJobId": null,
+    "referredJobName": null,
+    "referredJobAccess": null,
+    "metadata": [
+        {
+            "namespace": "",
+            "name": "Name",
+            "value": "test3",
+            "editable": false,
+            "required": true
+        }
+    ]
+}
