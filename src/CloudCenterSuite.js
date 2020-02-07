@@ -6,6 +6,97 @@ class CloudCenterSuite{
         this.parentJobId = 100
     }
 
+    changeJobStatus(query) {
+        /**
+         * params -> job_id and newStatus
+         * open get_jobs.json
+         * find the job id in the params
+         * change the status according to the param
+         * save get_jobs.json back to disk
+         * return the job the was changed
+         */
+        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+        let bulkJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        let job = null;
+        bulkJobs.jobs.forEach((element)=> {
+            if (element.id === query.job_id && element.status !== query.new_status) {
+                element.status = query.new_status;
+                job = element;
+            }
+        });
+
+        if (job) {
+            filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+            fs.writeFileSync(filePath, JSON.stringify(bulkJobs), 'utf8');
+        }
+
+        return {code: 200, result: job ? job : JSON.stringify({message: 'job already has new_state, no update'})};
+    }
+
+    changeJobsByStatus(query) {
+        /**
+         * params -> limit, oldStatus, newStatus
+         * open file get_jobs.json
+         * for itertion untill limit
+         * find a job with old status and change the status to new status
+         * add the job to result object
+         * save get_jobs back to disk and overright the old file
+         * return results back to user with jobs altered
+         */
+        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+        let bulkJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        let jobs = [];
+        let limit = query.limit ? Number(query.limit) : 0;
+
+        for (let i = 0; i < bulkJobs.jobs.length && limit > 0; i++) {
+            let job = bulkJobs.jobs[i];
+            if (job.status === query.old_status) {
+                job.status = query.new_status;
+                limit--;
+                jobs.push(job);
+            }
+        }
+        
+        if (jobs) {
+            filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+            fs.writeFileSync(filePath, JSON.stringify(bulkJobs), 'utf8');
+        }
+
+        return {code: 200, result: jobs ? jobs : JSON.stringify({message: 'no jobs found with old status'})};
+    }
+
+    randomizeJobsStatus() {
+        let statuses = {'JobRunning': ['JobFinished', 'JobRunning', 'JobStarting', 'JobSubmitted', 'JobCanceled', 'JobCancelling', 'JobError', 'JobPending', 'JobStopped', 'JobStopping', 'JobStoppingError', 'JobScaling', 'JobRejected', 'JobMigrating', 'JobMigrationError', 'JobUpgrading', 'JobUpgradeError', 'JobSuspending', 'JobSuspended', 'JobResuming', 'JobReconfiguring'],
+                        'JobStarting': [],
+                        'JobCancelling': [],
+                        'JobPending': [],
+                        'JobStopping': [],
+                        'JobSuspending': [],
+                        'JobScaling': [],
+                        'JobMigrating': [],
+                        'JobUpgrading': [],
+                        'JobResuming': [],
+                        'JobReconfiguring': [],
+                        'JobUpgradeError': [],
+                        'JobMigrationError': [],
+                        'JobReconfiguring': []
+        };  
+        let randomize = (status)=> {
+            return Math.floor(Math.random() * Math.floor(statuses[status].length));
+        }
+
+        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+        let getJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        
+        getJobs.jobs.forEach((ele, idx)=> {
+            if (idx % 2 === 0 && statuses.hasOwnProperty(ele.status)) {
+                ele.status = statuses[ele.status][randomize(ele.status)];
+            }
+        });
+
+        return {code:200, result: JSON.stringify(getJobs)};
+    }
+
     getJobs(){
         // retrieve from disk data saved by createJobs()
         // use file name get_jobs.json

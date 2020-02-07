@@ -3,6 +3,15 @@ function routes(router,handler) {
 	router.route('/')
 		.get(handler.home);
 
+	router.route('/randomize/jobs/status')
+		.get(handler.randomizeJobsStatus);
+
+	router.route('/change/job/status')
+		.get(handler.changeJobStatus);
+	
+	router.route('/change/jobs/bystatus')
+		.get(handler.changeJobsByStatus);
+
 	router.route('/create/jobs')
 		.get(handler.createJobs);
 
