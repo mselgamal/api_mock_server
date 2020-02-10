@@ -2,6 +2,12 @@ function routes(router,handler) {
 
 	router.route('/')
 		.get(handler.home);
+		
+	router.route('/be-console/api/v1.1/instances')
+		.post(handler.getInstances);
+
+	router.route('/be-console/api/v1.1/workflows')
+		.post(handler.getWorkflows);
 
 	router.route('/randomize/jobs/status')
 		.get(handler.randomizeJobsStatus);

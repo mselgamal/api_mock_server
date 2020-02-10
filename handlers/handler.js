@@ -15,6 +15,50 @@ function home(req,res) {
   @param {Object} httpResponse
   req url -> http://server_addr/
 */
+function getInstances(req,res) {
+  res.type("application/json");
+  let httpCode = null;
+  let result = null;
+  try {
+    result = cloudCenterSuite.getInstances();
+    httpCode = result.code;
+    result = result.result;
+  } catch(err) {
+    console.log(err);
+    httpCode = 500;
+    result = err.message;
+  } finally {
+    res.status(httpCode ? httpCode : 500).send(result);
+  }
+}
+
+/**
+  @param {Object} httpRequest
+  @param {Object} httpResponse
+  req url -> http://server_addr/
+*/
+function getWorkflows(req,res) {
+  res.type("application/json");
+  let httpCode = null;
+  let result = null;
+  try {
+    result = cloudCenterSuite.getWorkflows();
+    httpCode = result.code;
+    result = result.result;
+  } catch(err) {
+    console.log(err);
+    httpCode = 500;
+    result = err.message;
+  } finally {
+    res.status(httpCode ? httpCode : 500).send(result);
+  }
+}
+
+/**
+  @param {Object} httpRequest
+  @param {Object} httpResponse
+  req url -> http://server_addr/
+*/
 function randomizeJobsStatus(req,res) {
   res.type("application/json");
   let httpCode = null;
@@ -320,6 +364,8 @@ exports.createJobs = createJobs;
 exports.changeJobStatus = changeJobStatus;
 exports.changeJobsByStatus = changeJobsByStatus;
 exports.randomizeJobsStatus = randomizeJobsStatus;
+exports.getInstances = getInstances;
+exports.getWorkflows= getWorkflows;
 exports.getJobs = getJobs;
 exports.getJob = getJob;
 exports.getTenants = getTenants;

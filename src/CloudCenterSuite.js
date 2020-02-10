@@ -6,6 +6,33 @@ class CloudCenterSuite{
         this.parentJobId = 100
     }
 
+    changeInstanceState(query) {
+        /**
+         * params -> inst_id and newState
+         * open get_instances.json
+         * find the job id in the params
+         * change the status according to the param
+         * save get_instances.json back to disk
+         * return the job the was changed
+         */
+        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_instances.json');
+        let instances = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        let inst = null;
+        instances.jobs.forEach((element)=> {
+            if (element.id === query.job_id && element.status !== query.new_status) {
+                element.status = query.new_status;
+                inst = element;
+            }
+        });
+
+        if (inst) {
+            filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_instancess.json');
+            fs.writeFileSync(filePath, JSON.stringify(instances), 'utf8');
+        }
+
+        return {code: 200, result: inst ? inst : JSON.stringify({message: 'instance already has new_state or does not exist, no update'})};
+    }
+
     changeJobStatus(query) {
         /**
          * params -> job_id and newStatus
@@ -30,7 +57,7 @@ class CloudCenterSuite{
             fs.writeFileSync(filePath, JSON.stringify(bulkJobs), 'utf8');
         }
 
-        return {code: 200, result: job ? job : JSON.stringify({message: 'job already has new_state, no update'})};
+        return {code: 200, result: job ? job : JSON.stringify({message: 'job already has new_state or does not exist, no update'})};
     }
 
     changeJobsByStatus(query) {
@@ -104,6 +131,24 @@ class CloudCenterSuite{
         let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
         let getJobs = fs.readFileSync(filePath, 'utf8');
         return {code:200, result: getJobs};
+    }
+
+    getWorkflows(){
+        // retrieve from disk data saved by createJobs()
+        // use file name get_jobs.json
+        // convert to a json file or just send back to handler
+        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_workflows.json');
+        let getWfs= fs.readFileSync(filePath, 'utf8');
+        return {code:200, result: getWfs};
+    }
+
+    getInstances(){
+        // retrieve from disk data saved by createJobs()
+        // use file name get_jobs.json
+        // convert to a json file or just send back to handler
+        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_instances.json');
+        let getInst = fs.readFileSync(filePath, 'utf8');
+        return {code:200, result: getInst};
     }
 
     getJob(params){
