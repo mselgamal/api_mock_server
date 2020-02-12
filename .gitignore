@@ -1,3 +1,4 @@
+.env
 .dockerfile
 /api/cloudcenter5.x
 /node_modules
