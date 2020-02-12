@@ -260,7 +260,7 @@ class CloudCenterSuite{
         return {code: 200, result: tenantCloudReg};
     }
 
-    createJobs(){
+    createJobs(query){
 
         // open the bulk jobs template
         // convert it to json
@@ -284,13 +284,23 @@ class CloudCenterSuite{
         let bulkJob = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         
         let jobs = []
-        Object.keys(process.env).forEach((element)=> {  
-            if (element.includes('Job')) {
-                let m = new Map()
-                m.set(element, Number(process.env[element]));
-                jobs.push(m);
-            }
-        });
+        let statuses = ['JobRunning', 'JobError', 'JobFinished', 
+            'JobStopping', 'JobStopped'];
+        if (query.hasOwnProperty('status') && statuses.includes(query.status) &&
+        query.hasOwnProperty('limit') && query.limit != '' && !isNaN(query.limit)) {
+            let count = parseInt(query.limit);
+            let m = new Map();
+            m.set(query.status, count);
+            jobs.push(m);
+        } else {
+            Object.keys(process.env).forEach((element)=> {  
+                if (element.includes('Job')) {
+                    let m = new Map()
+                    m.set(element, Number(process.env[element]));
+                    jobs.push(m);
+                }
+            });
+        }
         let cloudFamilies = ['Vmware', 'Amazon', 'Azure'];
         jobs.forEach((element)=> {
             for (const [status, count] of element.entries()){

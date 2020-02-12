@@ -129,7 +129,7 @@ function createJobs(req,res) {
   let httpCode = null;
   let result = null;
   try {
-    result = cloudCenterSuite.createJobs();
+    result = cloudCenterSuite.createJobs(req.query);
     httpCode = result.code;
     result = result.result;
   } catch(err) {
