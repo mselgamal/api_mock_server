@@ -292,6 +292,11 @@ class CloudCenterSuite{
             let m = new Map();
             m.set(query.status, count);
             jobs.push(m);
+            filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');  
+            bulkJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            if (bulkJobs.jobs.length > 0) {
+                this.parentJobId = Number(bulkJobs.jobs[bulkJobs.jobs.length-1].id);
+            }
         } else {
             Object.keys(process.env).forEach((element)=> {  
                 if (element.includes('Job')) {
