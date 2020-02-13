@@ -92,6 +92,7 @@ class CloudCenterSuite{
         return {code: 200, result: jobs ? jobs : JSON.stringify({message: 'no jobs found with old status'})};
     }
 
+    // Not implemented yet
     randomizeJobsStatus() {
         let statuses = {'JobRunning': ['JobFinished', 'JobRunning', 'JobStarting', 'JobSubmitted', 'JobCanceled', 'JobCancelling', 'JobError', 'JobPending', 'JobStopped', 'JobStopping', 'JobStoppingError', 'JobScaling', 'JobRejected', 'JobMigrating', 'JobMigrationError', 'JobUpgrading', 'JobUpgradeError', 'JobSuspending', 'JobSuspended', 'JobResuming', 'JobReconfiguring'],
                         'JobStarting': [],
