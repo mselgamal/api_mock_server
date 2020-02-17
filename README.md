@@ -4,10 +4,13 @@
 - create api_routes.json
 	- for each json file created, make a key:value association
 	- for example: 
+		```json
 		{
 			"/api/v1/jobs": "get_jobs.json",
 			"/api/v1/job": "get_job.json"
 		}
+		```
+	- see example /api/sample_api 
 		
 ## Install Steps
 - [install nodejs](https://nodejs.org/en/download/)
