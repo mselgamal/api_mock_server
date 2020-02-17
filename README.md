@@ -13,7 +13,7 @@
 	- see example /api/sample_api 
 		
 ## Install Steps
-- [install nodejs](https://nodejs.org/en/download/)
+- [install nodejs 12.x+ version](https://nodejs.org/en/download/)
 - [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - open cli:
 	- go to root folder where repo would reside
