@@ -1,4 +1,6 @@
 let cloudCenterSuite = require('../src/CloudCenterSuite').CloudCenterSuite;
+let path = require('path');
+let fs = require('fs');
 
 /**
   @param {Object} httpRequest
@@ -8,50 +10,6 @@ let cloudCenterSuite = require('../src/CloudCenterSuite').CloudCenterSuite;
 function home(req,res) {
   res.type("application/json");
   res.sendStatus(200);
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  req url -> http://server_addr/
-*/
-function getInstances(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getInstances();
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    console.log(err);
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 500).send(result);
-  }
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  req url -> http://server_addr/
-*/
-function getWorkflows(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getWorkflows();
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    console.log(err);
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 500).send(result);
-  }
 }
 
 /**
@@ -143,27 +101,6 @@ function createJobs(req,res) {
 /**
   @param {Object} httpRequest
   @param {Object} httpResponse
-  req url -> http://server_addr/cloudcenter-ccm-backend/api/v2/jobs
-*/
-function getJobs(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getJobs();
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 404).send(result);
-  }
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
   starts TAP process
   req url http://server_addr/cloudcenter-ccm-backend/api/v2/jobs/{id}
 */
@@ -183,196 +120,52 @@ function getJob(req,res) {
   }
 }
 
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  
-  req url http://server_addr/cloudcenter-cloud-setup/api/v1/tenants
-*/
-function getTenants(req,res) {
+function getAnyRoute(req, res, next) {
   res.type("application/json");
   let httpCode = null;
   let result = null;
   try {
-    result = cloudCenterSuite.getTenants(req.params);
-    httpCode = result.code;
-    result = result.result;
+    let rootDir = path.join(__dirname, '..', 'api');
+    let dirs = fs.readdirSync(rootDir);
+    for (let i = 0; i < dirs.length ;i++) {
+      folder = dirs[i];
+      if (!folder.startsWith('.')) {
+        filePath = path.join(__dirname, '..', 'api', folder, 'api_routes.json');
+        if (fs.existsSync(filePath)) {
+          try {
+            let apiRoutes = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            url = req.path
+            if (apiRoutes.hasOwnProperty(url)) {
+              httpCode = 200;
+              filePath = path.join(__dirname, '..', 'api', folder, apiRoutes[url]);
+              result = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+              break;
+            }
+          } catch(err) {
+            throw new Error('could not reason route in api_route.json - error ' + err.message);
+          }
+        }
+      }
+    }
   } catch(err) {
+    console.log(err);
     httpCode = 500;
     result = err.message;
   } finally {
-    res.status(httpCode ? httpCode : 404).send(result);
-  }
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  
-  req url http://server_addr/cloudcenter-ccm-backend/api/v1/clouds
-*/
-function getClouds(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getClouds(req.params);
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 404).send(result);
-  }
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  
-  req url http://server_addr/cloudcenter-ccm-backend/api/v1/tenants/:tenantId
-*/
-function getTenant(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getTenant(req.params);
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 404).send(result);
-  }
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  
-  req url http://server_addr/suite-idm/api/v1/currentUser/userInfo
-*/
-function getUserInfo(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getUserInfo(req.params);
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 404).send(result);
-  }
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  
-  req url http://server_addr/cloudcenter-cloud-setup/api/v1/tenants/:tenantId/clouds
-*/
-function getTenantClouds(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getTenantClouds(req.params);
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 404).send(result);
-  }
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  
-  req url http://server_addr/cloudcenter-cloud-setup/api/v1/tenants/:tenantId/clouds/:cloud
-*/
-function getTenantCloud(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getTenantCloud(req.params);
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 404).send(result);
-  }
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  
-  req url http://server_addr/cloudcenter-cloud-setup/api/v1/tenants/:tenantId/clouds/:cloudId/regions/:regionId
-*/
-function getTenantCloudRegion(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getTenantCloudRegion(req.params);
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 404).send(result);
-  }
-}
-
-/**
-  @param {Object} httpRequest
-  @param {Object} httpResponse
-  
-  req url http://server_addr/cloudcenter-cloud-setup/api/v1/tenants/:tenantId/clouds/:cloudId/regions
-*/
-function getTenantCloudRegions(req,res) {
-  res.type("application/json");
-  let httpCode = null;
-  let result = null;
-  try {
-    result = cloudCenterSuite.getTenantCloudRegions(req.params);
-    httpCode = result.code;
-    result = result.result;
-  } catch(err) {
-    httpCode = 500;
-    result = err.message;
-  } finally {
-    res.status(httpCode ? httpCode : 404).send(result);
+    if (result) {
+      res.status(httpCode ? httpCode : 404).send(result);
+    }
+    else {
+      console.log('sending to next route');
+      next();
+    }
   }
 }
 
 exports.home = home;
+exports.getAnyRoute = getAnyRoute;
 exports.createJobs = createJobs;
 exports.changeJobStatus = changeJobStatus;
 exports.changeJobsByStatus = changeJobsByStatus;
 exports.randomizeJobsStatus = randomizeJobsStatus;
-exports.getInstances = getInstances;
-exports.getWorkflows= getWorkflows;
-exports.getJobs = getJobs;
 exports.getJob = getJob;
-exports.getTenants = getTenants;
-exports.getClouds = getClouds;
-exports.getTenant = getTenant;
-exports.getUserInfo = getUserInfo;
-exports.getTenantClouds = getTenantClouds;
-exports.getTenantCloud = getTenantCloud;
-exports.getTenantCloudRegion = getTenantCloudRegion;
-exports.getTenantCloudRegions = getTenantCloudRegions;

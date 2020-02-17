@@ -1,0 +1,13 @@
+{
+    "/cloudcenter-ccm-backend/api/v1/clouds": "get_clouds.json",
+    "/suite-idm/api/v1/currentUser/userInfo": "get_userinfo.json",
+    "/cloudcenter-ccm-backend/api/v2/jobs": "get_jobs.json",
+    "/cloudcenter-ccm-backend/api/v1/tenants": "get_tenants.json",
+    "/cloudcenter-ccm-backend/api/v1/tenants/1": "get_tenant.json",
+    "/cloudcenter-ccm-backend/api/v1/tenants/1/clouds": "get_tenant_clouds.json",
+    "/cloudcenter-cloud-setup/api/v1/tenants/1/clouds/40": "get_tenant_cloud.json",
+    "/cloudcenter-cloud-setup/api/v1/tenants/1/clouds/40/regions/39": "get_tenant_cloud_region.json",
+    "/cloudcenter-cloud-setup/api/v1/tenants/1/clouds/40/regions": "get_tenant_cloud_regions.json",
+    "/be-console/api/v1.1/workflows": "get_workflows.json",
+    "/be-console/api/v1.1/instances": "get_instances.json"
+}
