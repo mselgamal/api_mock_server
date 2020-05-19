@@ -1,0 +1,32 @@
+{
+    "totalCount": "1",
+    "imdata": [
+        {
+            "fabricNode": {
+                "attributes": {
+                    "adSt": "on",
+                    "childAction": "",
+                    "delayedHeartbeat": "no",
+                    "dn": "topology/pod-1/node-1",
+                    "extMngdBy": "",
+                    "fabricSt": "unknown",
+                    "id": "1",
+                    "lastStateModTs": "1970-01-01T00:00:00.000+00:00",
+                    "lcOwn": "local",
+                    "modTs": "2017-07-28T12:47:19.751+00:00",
+                    "model": "APIC-SERVER-M1",
+                    "monPolDn": "uni/fabric/monfab-default",
+                    "name": "pcaas-apic-01",
+                    "nameAlias": "",
+                    "nodeType": "unspecified",
+                    "role": "controller",
+                    "serial": "FCH1848V080",
+                    "status": "",
+                    "uid": "0",
+                    "vendor": "Cisco Systems, Inc",
+                    "version": "A"
+                }
+            }
+        }
+    ]
+}
