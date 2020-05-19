@@ -1,7 +1,7 @@
 {
-    "id": "1",
-    "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v1/tenants/1",
-    "name": "MOCK_TENANT",
+    "id": "2",
+    "resource": "https://10.199.88.228/cloudcenter-ccm-backend/api/v1/tenants/2",
+    "name": "MOCK_SUBTENANT",
     "url": null,
     "about": null,
     "contactEmail": null,
@@ -37,7 +37,7 @@
             "value": "5"
         }
     ],
-    "user": {"username":"em7admin", "id":"23", "emailAddr":"mock@cisco.com"},
+    "user": null,
     "trademarkURL": null,
     "deleted": false
 }

@@ -286,7 +286,7 @@ class CloudCenterSuite{
         
         let jobs = []
         let statuses = ['JobRunning', 'JobError', 'JobFinished', 
-            'JobStopping', 'JobStopped'];
+            'JobStopping', 'JobStopped', 'JobStarting'];
         if (query.hasOwnProperty('status') && statuses.includes(query.status) &&
         query.hasOwnProperty('limit') && query.limit != '' && !isNaN(query.limit)) {
             let count = parseInt(query.limit);

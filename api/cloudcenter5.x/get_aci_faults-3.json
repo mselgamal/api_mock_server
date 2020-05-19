@@ -1,0 +1,59 @@
+{
+    "totalCount": "1",
+    "imdata": [
+        {
+            "faultInst": {
+                "attributes": {
+                    "ack": "no",
+                    "cause": "equipment-failed",
+                    "changeSet": "",
+                    "childAction": "",
+                    "code": "F1940",
+                    "created": "2020-03-09T20:08:41.075+00:00",
+                    "delegated": "no",
+                    "descr": "Power supply unit on Node 2 is failed",
+                    "dn": "topology/pod-1/node-2/sys/ch/psuslot-5/psu/fault-F1940",
+                    "domain": "infra",
+                    "highestSeverity": "major",
+                    "lastTransition": "2020-03-09T20:50:13.294+00:00",
+                    "lc": "raised",
+                    "occur": "1",
+                    "origSeverity": "major",
+                    "prevSeverity": "major",
+                    "rule": "eqpt-psu-psu-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "equipment-failed",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultInst": {
+                "attributes": {
+                    "ack": "no",
+                    "cause": "equipment-failed",
+                    "changeSet": "",
+                    "childAction": "",
+                    "code": "F1940",
+                    "created": "2020-03-09T20:08:41.075+00:00",
+                    "delegated": "no",
+                    "descr": "Power supply unit on Node 3 is failed",
+                    "dn": "topology/pod-1/node-3/sys/ch/psuslot-5/psu/fault-F1940",
+                    "domain": "infra",
+                    "highestSeverity": "major",
+                    "lastTransition": "2020-03-09T20:49:13.294+00:00",
+                    "lc": "raised",
+                    "occur": "1",
+                    "origSeverity": "major",
+                    "prevSeverity": "major",
+                    "rule": "eqpt-psu-psu-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "equipment-failed",
+                    "type": "operational"
+                }
+            }
+        }
+    ]
+}
