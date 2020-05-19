@@ -20,5 +20,6 @@
     "/be-console/api/v1.1/workflows": "get_workflows.json",
     "/be-console/api/v1.1/instances": "get_instances.json",
     "/cloudcenter-ccm-backend/api/v1/tenants/2": "get_subtenant_2.json",
-    "/api/class/faultInst.json": "get_aci_faults-2.json"
+    "/api/class/faultInst.json": "get_aci_faults-2.json",
+    "/api/class/eqptcapacityEntity.json": "eqptcapacityEntity.json"
 }
