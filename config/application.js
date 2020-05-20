@@ -27,9 +27,9 @@ global.App = {
 			this.httpServer.createServer(this.app).listen(this.httpPort, ()=> {
 				console.log("Mock Server, http port " + this.httpPort);
 			});
-			this.httpsServer.createServer(credentials, this.app).listen(this.httpsPort, ()=>{
-				console.log("Mock Server, https port " + this.httpsPort);
-			});
+			//this.httpsServer.createServer(credentials, this.app).listen(this.httpsPort, ()=>{
+			//	console.log("Mock Server, https port " + this.httpsPort);
+			//});
 			//this.app.listen(this.httpPort,()=> {
 			//	console.log("Mock Server, http port " + this.httpPort);
 			//});
