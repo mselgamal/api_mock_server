@@ -6,8 +6,8 @@ let enviroment = process.env.NODE_ENV,
   logger = require('morgan'),
   http = require('http'),
   https = require('http'),
-  key  = fs.readFileSync(path.join(__dirname,'/security','/cert.key')),
-  cert = fs.readFileSync(path.join(__dirname,'/security','/cert.pem')),
+  key  = fs.readFileSync(path.join(__dirname,'/security','/local-cert-generator','/server.key')),
+  cert = fs.readFileSync(path.join(__dirname,'/security','/local-cert-generator','/server.crt')),
   credentials = {key: key, cert: cert};
 
 global.App = {
