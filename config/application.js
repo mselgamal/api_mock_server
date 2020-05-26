@@ -24,15 +24,15 @@ global.App = {
 	start: function() {
 		if (!this.started) {
 			this.started = true;
-			this.httpServer.createServer(this.app).listen(this.httpPort, ()=> {
-				console.log("Mock Server, http port " + this.httpPort);
-			});
+			//this.httpServer.createServer(this.app).listen(this.httpPort, ()=> {
+			//	console.log("Mock Server, http port " + this.httpPort);
+			//});
 			//this.httpsServer.createServer(credentials, this.app).listen(this.httpsPort, ()=>{
 			//	console.log("Mock Server, https port " + this.httpsPort);
 			//});
-			//this.app.listen(this.httpPort,()=> {
-			//	console.log("Mock Server, http port " + this.httpPort);
-			//});
+			this.app.listen(this.httpPort,()=> {
+				console.log("Mock Server, http port " + this.httpPort);
+			});
 		} else {
 			console.log("MOCK Server app is already running");
 		}
