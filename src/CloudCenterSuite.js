@@ -15,7 +15,7 @@ class CloudCenterSuite{
          * save get_instances.json back to disk
          * return the job the was changed
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_instances.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_instances.json');
         let instances = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         let inst = null;
         instances.jobs.forEach((element)=> {
@@ -26,7 +26,7 @@ class CloudCenterSuite{
         });
 
         if (inst) {
-            filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_instancess.json');
+            filePath = path.join(__dirname, '..', 'api', 'json', 'get_instancess.json');
             fs.writeFileSync(filePath, JSON.stringify(instances), 'utf8');
         }
 
@@ -42,7 +42,7 @@ class CloudCenterSuite{
          * save get_jobs.json back to disk
          * return the job the was changed
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_jobs.json');
         let bulkJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         let job = null;
         bulkJobs.jobs.forEach((element)=> {
@@ -53,7 +53,7 @@ class CloudCenterSuite{
         });
 
         if (job) {
-            filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+            filePath = path.join(__dirname, '..', 'api', 'json', 'get_jobs.json');
             fs.writeFileSync(filePath, JSON.stringify(bulkJobs), 'utf8');
         }
 
@@ -70,7 +70,7 @@ class CloudCenterSuite{
          * save get_jobs back to disk and overright the old file
          * return results back to user with jobs altered
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_jobs.json');
         let bulkJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         let jobs = [];
         let limit = query.limit ? Number(query.limit) : 0;
@@ -85,7 +85,7 @@ class CloudCenterSuite{
         }
         
         if (jobs) {
-            filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+            filePath = path.join(__dirname, '..', 'api', 'json', 'get_jobs.json');
             fs.writeFileSync(filePath, JSON.stringify(bulkJobs), 'utf8');
         }
 
@@ -113,7 +113,7 @@ class CloudCenterSuite{
             return Math.floor(Math.random() * Math.floor(statuses[status].length));
         }
 
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_jobs.json');
         let getJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         
         getJobs.jobs.forEach((ele, idx)=> {
@@ -129,7 +129,7 @@ class CloudCenterSuite{
         // retrieve from disk data saved by createJobs()
         // use file name get_jobs.json
         // convert to a json file or just send back to handler
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_jobs.json');
         let getJobs = fs.readFileSync(filePath, 'utf8');
         return {code:200, result: getJobs};
     }
@@ -138,7 +138,7 @@ class CloudCenterSuite{
         // retrieve from disk data saved by createJobs()
         // use file name get_jobs.json
         // convert to a json file or just send back to handler
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_workflows.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_workflows.json');
         let getWfs= fs.readFileSync(filePath, 'utf8');
         return {code:200, result: getWfs};
     }
@@ -147,7 +147,7 @@ class CloudCenterSuite{
         // retrieve from disk data saved by createJobs()
         // use file name get_jobs.json
         // convert to a json file or just send back to handler
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_instances.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_instances.json');
         let getInst = fs.readFileSync(filePath, 'utf8');
         return {code:200, result: getInst};
     }
@@ -159,9 +159,9 @@ class CloudCenterSuite{
             what to do about job status ?
                 - grab the status from job_status map, jobid must be in there during the createJobs process
         */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'job.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'job.json');
         let job = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+        filePath = path.join(__dirname, '..', 'api', 'json', 'get_jobs.json');
         let bulkJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         let bulk_job_cpy = null;
         bulkJobs.jobs.forEach((element)=> {
@@ -182,7 +182,7 @@ class CloudCenterSuite{
          * open get_tenants.json
          * return that json object
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_tenants.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_tenants.json');
         let tenants = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         return {code: 200, result: tenants};
     }
@@ -192,7 +192,7 @@ class CloudCenterSuite{
          * open get_tenant.json
          * return that json object
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_tenant.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_tenant.json');
         let tenant = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         return {code: 200, result: tenant};
     }
@@ -202,7 +202,7 @@ class CloudCenterSuite{
          * open get_userinfo.json
          * return that json object
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_userinfo.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_userinfo.json');
         let userinfo = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         return {code: 200, result: userinfo};
     }
@@ -212,7 +212,7 @@ class CloudCenterSuite{
          * open get_clouds.json
          * return object
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_clouds.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_clouds.json');
         let clouds = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         return {code: 200, result: clouds};
     }
@@ -222,7 +222,7 @@ class CloudCenterSuite{
          * open get_tenant_clouds.json
          * return json object
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_tenant_clouds.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_tenant_clouds.json');
         let tenantClouds = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         return {code: 200, result: tenantClouds};
     }
@@ -234,7 +234,7 @@ class CloudCenterSuite{
          * retrieve object for specified ID in the api call
          * if id not found, return 404 not found
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_tenant_cloud.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_tenant_cloud.json');
         let tenantCloud = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         return {code: 200, result: tenantCloud};
     }
@@ -244,7 +244,7 @@ class CloudCenterSuite{
          * open get_tenant_cloud_regions.json
          * return json object
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_tenant_cloud_regions.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_tenant_cloud_regions.json');
         let tenantCloudRegs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         return {code: 200, result: tenantCloudRegs};
     }
@@ -256,7 +256,7 @@ class CloudCenterSuite{
          * retrieve object for specified ID in the api call
          * if id not found, return 404 not found
          */
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_tenant_cloud_region.json');
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'get_tenant_cloud_region.json');
         let tenantCloudReg = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         return {code: 200, result: tenantCloudReg};
     }
@@ -279,9 +279,9 @@ class CloudCenterSuite{
             cloudcenter-ccm-backend/api/v2/jobs?showDeploymentAttributes=true&page=0&size=2000
         */
         
-        let filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'bulk_job_template.json');  
+        let filePath = path.join(__dirname, '..', 'api', 'json', 'bulk_job_template.json');  
         let bulkJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'bulk_job.json');
+        filePath = path.join(__dirname, '..', 'api', 'json', 'bulk_job.json');
         let bulkJob = JSON.parse(fs.readFileSync(filePath, 'utf8'));
         
         let jobs = []
@@ -293,7 +293,7 @@ class CloudCenterSuite{
             let m = new Map();
             m.set(query.status, count);
             jobs.push(m);
-            filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');  
+            filePath = path.join(__dirname, '..', 'api', 'json', 'get_jobs.json');  
             bulkJobs = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             if (bulkJobs.jobs.length > 0) {
                 this.parentJobId = Number(bulkJobs.jobs[bulkJobs.jobs.length-1].id);
@@ -325,7 +325,7 @@ class CloudCenterSuite{
         bulkJobs.size = bulkJobs.jobs.length;
         bulkJobs.totalElements = bulkJobs.jobs.length;
         bulkJobs.totalPages = 1;
-        filePath = path.join(__dirname, '..', 'api', 'cloudcenter5.x', 'get_jobs.json');
+        filePath = path.join(__dirname, '..', 'api', 'json', 'get_jobs.json');
         fs.writeFileSync(filePath, JSON.stringify(bulkJobs), 'utf8');
         return {code:200, result: bulkJobs};
     }
