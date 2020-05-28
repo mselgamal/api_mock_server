@@ -23,5 +23,9 @@
     "/api/class/faultInst.json": "get_aci_faults-2.json",
     "/api/class/eqptcapacityEntity.json": "eqptcapacityEntity.json",
     "/api/mo/topology/pod-1/node-1.json":"discover_apic.json",
-    "/api/class/aaaLogin.json": "aaalogin.json"
+    "/api/class/aaaLogin.json": "aaalogin.json",
+    "/rest/about": "get_about.json",
+    "/rest/summary": "get_summary.json",
+    "/rest/clusters": "get_clusters.json",
+    "/rest/datastores": "get_datastores.json"
 }
