@@ -134,8 +134,10 @@ function getAnyRoute(req, res, next) {
         if (fs.existsSync(filePath)) {
           try {
             let apiRoutes = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            url = req.path
-            if (apiRoutes.hasOwnProperty(url)) {
+            url = null
+            if (apiRoutes.hasOwnProperty(req.path)) url = req.path
+            else if (apiRoutes.hasOwnProperty(req.originalUrl)) url = req.originalUrl
+            if (url) {
               httpCode = 200;
               filePath = path.join(__dirname, '..', 'api', folder, apiRoutes[url]);
               result = JSON.parse(fs.readFileSync(filePath, 'utf8'));

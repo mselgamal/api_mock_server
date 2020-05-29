@@ -27,5 +27,7 @@
     "/rest/about": "get_about.json",
     "/rest/summary": "get_summary.json",
     "/rest/clusters": "get_clusters.json",
-    "/rest/datastores": "get_datastores.json"
+    "/rest/datastores": "get_datastores.json",
+    "/stats?format=json&from=-5min&target=stats.counters.scvmclient.allhosts.nfsReads.65788.rate&target=stats.counters.scvmclient.allhosts.nfsWrites.65788.rate&target=divideSeries(stats.timers.scvmclient.allhosts.nfsReadLatency.65788.total,stats.counters.scvmclient.allhosts.nfsReads.65788.count)&target=divideSeries(stats.timers.scvmclient.allhosts.nfsWriteLatency.65788.total,stats.counters.scvmclient.allhosts.nfsWrites.65788.count)&target=scale(stats.counters.scvmclient.allhosts.nfsBytesRead.65788.rate,%200.000001)&target=scale(stats.counters.scvmclient.allhosts.nfsBytesWritten.65788.rate,%200.000001)": "get_stats_1.json",
+    "/stats?format=json&from=-5min&target=stats.counters.scvmclient.allhosts.nfsReads.65803.rate&target=stats.counters.scvmclient.allhosts.nfsWrites.65803.rate&target=divideSeries(stats.timers.scvmclient.allhosts.nfsReadLatency.65803.total,stats.counters.scvmclient.allhosts.nfsReads.65803.count)&target=divideSeries(stats.timers.scvmclient.allhosts.nfsWriteLatency.65803.total,stats.counters.scvmclient.allhosts.nfsWrites.65803.count)&target=scale(stats.counters.scvmclient.allhosts.nfsBytesRead.65803.rate,%200.000001)&target=scale(stats.counters.scvmclient.allhosts.nfsBytesWritten.65803.rate,%200.000001)": "get_stats_2.json"    
 }
