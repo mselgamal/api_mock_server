@@ -36,6 +36,7 @@ function updateCookie(token, urlToken) {
     apicChallange = urlToken;
 }
 
+let reqResMap = {};
 function req(cb) {
     if (requests.item.length !== 0) {
         let reqItem = requests.item.shift();
@@ -52,7 +53,6 @@ function req(cb) {
         console.log(options.host, options.path, options.method);
         let https_req = https.request(options, function(res) {
             res.setEncoding('utf8');
-
             let body = '';
         
             res.on('data', function(chunk) {
@@ -74,6 +74,8 @@ function req(cb) {
                     let fileName = options.method + '_' + sha1(options.path) +'.json';
                     filePath = path.join(__dirname, '..', '..', 'api', 'json', fileName);
                     fs.writeFileSync(filePath, body, 'utf8');
+
+                    reqResMap[apiPath] = fileName
                 }
                 req(null);
             });
@@ -93,6 +95,13 @@ function req(cb) {
             https_req.write(JSON.stringify(d));
         }
         https_req.end();
+    } else {
+        if (Object.keys(reqResMap).length !== 0) {
+            filePath = path.join(__dirname, '..', '..', 'api', 'json', 'api_routes.json');
+            let apiRoutes = fs.readFileSync(filePath, 'utf8');
+            newApiRoutes = {...reqResMap, ...JSON.parse(apiRoutes)};
+            fs.writeFileSync(filePath, JSON.stringify(newApiRoutes, 0, 4), 'utf8');
+        }
     }
 }
 req(updateCookie);
