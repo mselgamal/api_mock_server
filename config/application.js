@@ -5,10 +5,17 @@ let enviroment = process.env.NODE_ENV,
   parser = require('body-parser'),
   logger = require('morgan'),
   http = require('http'),
+<<<<<<< HEAD
   https = require('http'),
   key  = fs.readFileSync(path.join(__dirname,'/security','/local-cert-generator','/server.key')),
   cert = fs.readFileSync(path.join(__dirname,'/security','/local-cert-generator','/server.crt')),
   credentials = {key: key, cert: cert};
+=======
+  https = require('http');
+  //key  = fs.readFileSync(path.join(__dirname,'/security','/cert.key')),
+  //cert = fs.readFileSync(path.join(__dirname,'/security','/cert.pem')),
+  //credentials = {key: key, cert: cert};
+>>>>>>> master
 
 global.App = {
 	started: false,
@@ -24,15 +31,15 @@ global.App = {
 	start: function() {
 		if (!this.started) {
 			this.started = true;
-			this.httpServer.createServer(this.app).listen(this.httpPort, ()=> {
-				console.log("Mock Server, http port " + this.httpPort);
-			});
-			this.httpsServer.createServer(credentials, this.app).listen(this.httpsPort, ()=>{
-				console.log("Mock Server, https port " + this.httpsPort);
-			});
-			//this.app.listen(this.httpPort,()=> {
+			//this.httpServer.createServer(this.app).listen(this.httpPort, ()=> {
 			//	console.log("Mock Server, http port " + this.httpPort);
 			//});
+			//this.httpsServer.createServer(credentials, this.app).listen(this.httpsPort, ()=>{
+			//	console.log("Mock Server, https port " + this.httpsPort);
+			//});
+			this.app.listen(this.httpPort,()=> {
+				console.log("Mock Server, http port " + this.httpPort);
+			});
 		} else {
 			console.log("MOCK Server app is already running");
 		}

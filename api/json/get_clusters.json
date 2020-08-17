@@ -1,0 +1,3000 @@
+[
+    {
+        "entityRef": {
+            "id": "5262097352729120642:8144483935350069340",
+            "type": "CLUSTER",
+            "name": "hx-cluster-a",
+            "confignum": 0,
+            "setId": true,
+            "setName": true,
+            "setType": true,
+            "setIdtype": false,
+            "setConfignum": false
+        },
+        "config": {
+            "name": "hx-cluster-a",
+            "ip": {
+                "method": "STATIC",
+                "addr": "192.168.0.100",
+                "subnetMask": "255.255.255.0",
+                "gateway": "",
+                "stService": "CLUSTER",
+                "vlanId": -1,
+                "setMethod": true,
+                "setAddr": true,
+                "setSubnetMask": true,
+                "setGateway": true,
+                "setStService": true,
+                "setVlanId": true
+            },
+            "mgmtIp": {
+                "method": "STATIC",
+                "addr": "198.18.134.200",
+                "subnetMask": "255.255.255.0",
+                "gateway": "",
+                "stService": "MGMT",
+                "vlanId": -1,
+                "setMethod": true,
+                "setAddr": true,
+                "setSubnetMask": true,
+                "setGateway": true,
+                "setStService": true,
+                "setVlanId": true
+            },
+            "vCenterDatacenter": "dCloud-HX-DC-A",
+            "vCenterDatacenterId": "datacenter-21",
+            "vCenterClusterName": "hx-cluster-a",
+            "vCenterClusterId": "domain-c47",
+            "vCenterURL": "vc1.dcloud.cisco.com",
+            "nodeIPSettings": {
+                "198.18.134.201": [
+                    {
+                        "method": "STATIC",
+                        "addr": "198.18.134.201",
+                        "subnetMask": "255.255.192.0",
+                        "gateway": "198.18.128.1",
+                        "stService": "HYPERVISOR",
+                        "vlanId": 3091,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "192.168.0.11",
+                        "subnetMask": "255.255.255.0",
+                        "gateway": "",
+                        "stService": "VMOTION",
+                        "vlanId": 3092,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "198.18.134.211",
+                        "subnetMask": "255.255.192.0",
+                        "gateway": "198.18.128.1",
+                        "stService": "STCTL_MGMT",
+                        "vlanId": 3091,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "192.168.0.51",
+                        "subnetMask": "255.255.255.0",
+                        "gateway": "",
+                        "stService": "STCTL",
+                        "vlanId": 3092,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "DHCP",
+                        "subnetMask": "255.255.192.0",
+                        "gateway": "198.18.128.1",
+                        "stService": "IPMI",
+                        "vlanId": 3091,
+                        "setMethod": true,
+                        "setAddr": false,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    }
+                ],
+                "198.18.134.202": [
+                    {
+                        "method": "STATIC",
+                        "addr": "198.18.134.202",
+                        "subnetMask": "255.255.192.0",
+                        "gateway": "198.18.128.1",
+                        "stService": "HYPERVISOR",
+                        "vlanId": 3091,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "192.168.0.12",
+                        "subnetMask": "255.255.255.0",
+                        "gateway": "",
+                        "stService": "VMOTION",
+                        "vlanId": 3092,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "198.18.134.212",
+                        "subnetMask": "255.255.192.0",
+                        "gateway": "198.18.128.1",
+                        "stService": "STCTL_MGMT",
+                        "vlanId": 3091,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "192.168.0.52",
+                        "subnetMask": "255.255.255.0",
+                        "gateway": "",
+                        "stService": "STCTL",
+                        "vlanId": 3092,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "DHCP",
+                        "subnetMask": "255.255.192.0",
+                        "gateway": "198.18.128.1",
+                        "stService": "IPMI",
+                        "vlanId": 3091,
+                        "setMethod": true,
+                        "setAddr": false,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    }
+                ],
+                "198.18.134.203": [
+                    {
+                        "method": "STATIC",
+                        "addr": "198.18.134.203",
+                        "subnetMask": "255.255.192.0",
+                        "gateway": "198.18.128.1",
+                        "stService": "HYPERVISOR",
+                        "vlanId": 3091,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "192.168.0.13",
+                        "subnetMask": "255.255.255.0",
+                        "gateway": "",
+                        "stService": "VMOTION",
+                        "vlanId": 3092,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "198.18.134.213",
+                        "subnetMask": "255.255.192.0",
+                        "gateway": "198.18.128.1",
+                        "stService": "STCTL_MGMT",
+                        "vlanId": 3091,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "192.168.0.53",
+                        "subnetMask": "255.255.255.0",
+                        "gateway": "",
+                        "stService": "STCTL",
+                        "vlanId": 3092,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    },
+                    {
+                        "method": "DHCP",
+                        "subnetMask": "255.255.192.0",
+                        "gateway": "198.18.128.1",
+                        "stService": "IPMI",
+                        "vlanId": 3091,
+                        "setMethod": true,
+                        "setAddr": false,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": true,
+                        "setVlanId": true
+                    }
+                ],
+                "hx-a-4.dcloud.cisco.com": [
+                    {
+                        "method": "STATIC",
+                        "addr": "198.18.134.204",
+                        "subnetMask": "255.255.255.0",
+                        "stService": "HYPERVISOR",
+                        "vlanId": 0,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": false,
+                        "setStService": true,
+                        "setVlanId": false
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "192.168.0.54",
+                        "subnetMask": "255.255.255.0",
+                        "stService": "STCTL",
+                        "vlanId": 0,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": false,
+                        "setStService": true,
+                        "setVlanId": false
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "192.168.0.14",
+                        "subnetMask": "255.255.255.0",
+                        "gateway": "0.0.0.0",
+                        "vlanId": 0,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": true,
+                        "setStService": false,
+                        "setVlanId": false
+                    },
+                    {
+                        "method": "STATIC",
+                        "addr": "198.18.134.214",
+                        "subnetMask": "255.255.255.0",
+                        "stService": "STCTL_MGMT",
+                        "vlanId": 0,
+                        "setMethod": true,
+                        "setAddr": true,
+                        "setSubnetMask": true,
+                        "setGateway": false,
+                        "setStService": true,
+                        "setVlanId": false
+                    }
+                ]
+            },
+            "dnsServers": [
+                "198.18.133.1"
+            ],
+            "ntpServer": "198.18.128.1",
+            "size": 4,
+            "clusterUuid": "5262097352729120642:8144483935350069340",
+            "vCenterSSOURL": "",
+            "dataReplicationFactor": 2,
+            "clusterAccessPolicy": "lenient",
+            "workloadType": "VSI",
+            "ucsmHostName": "ucsm1-a.dcloud.cisco.com",
+            "ucsmOrg": "Hyperflex-A",
+            "diskEncryption": "NOT_SUPPORTED",
+            "schConfiguraton": {
+                "enabled": false,
+                "emailAddress": "",
+                "proxyPort": 0,
+                "enableProxy": false,
+                "setEnabled": true,
+                "setEmailAddress": true,
+                "setProxyUrl": false,
+                "setProxyPort": true,
+                "setProxyUser": false,
+                "setProxyPassword": false,
+                "setCloudEnvironment": false,
+                "setCloudAsupEndpoint": false,
+                "setPortalUrl": false,
+                "setEnableProxy": false
+            },
+            "remoteSupportConfiguration": {
+                "enabled": false,
+                "enableSupportBundleAction": false,
+                "setEnabled": true,
+                "setEnableSupportBundleAction": true
+            },
+            "numZones": 0,
+            "nodeSiteMap": {},
+            "clusterType": "DEFAULT_CLUSTER",
+            "setIp": true,
+            "setVCenterDatacenterId": true,
+            "setVCenterClusterName": true,
+            "setVCenterClusterId": true,
+            "setVCenterURL": true,
+            "nodeIPSettingsSize": 4,
+            "setNodeIPSettings": true,
+            "dnsServersSize": 1,
+            "dnsServersIterator": [
+                "198.18.133.1"
+            ],
+            "setDnsServers": true,
+            "setNtpServer": true,
+            "setSize": true,
+            "setClusterUuid": true,
+            "setVClusterConfig": false,
+            "setDataReplicationFactor": true,
+            "setClusterAccessPolicy": true,
+            "setUserDatastore": false,
+            "setWorkloadType": true,
+            "setDiskEncryption": true,
+            "setZoneType": false,
+            "setSchConfiguraton": true,
+            "setRemoteSupportConfiguration": true,
+            "setNumZones": false,
+            "nodeSiteMapSize": 0,
+            "setNodeSiteMap": true,
+            "setHypervDetails": false,
+            "setAuxZkIp": false,
+            "setVCenterSSOURL": true,
+            "setVCenterDatacenter": true,
+            "setMgmtIp": true,
+            "setUcsmHostName": true,
+            "setUcsmUserName": false,
+            "setUcsmPassword": false,
+            "setUcsmOrg": true,
+            "setName": true,
+            "setDataZkIp": false,
+            "setDeploymentMode": false,
+            "setManagedBy": false,
+            "setClusterType": true,
+            "vcenterDatacenter": "dCloud-HX-DC-A",
+            "vcenterDatacenterId": "datacenter-21",
+            "vcenterClusterName": "hx-cluster-a",
+            "vcenterClusterId": "domain-c47",
+            "vcenterURL": "vc1.dcloud.cisco.com",
+            "vcenterSSOURL": ""
+        },
+        "state": "ONLINE",
+        "stNodes": [
+            {
+                "id": "42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                "type": "NODE",
+                "name": "hx-a-1",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            {
+                "id": "4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                "type": "NODE",
+                "name": "hx-a-3",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            {
+                "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                "type": "NODE",
+                "name": "hx-a-4",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            {
+                "id": "4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                "type": "NODE",
+                "name": "hx-a-2",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            }
+        ],
+        "about": {
+            "instanceUuid": "4906b9a9-9af1-4f82-8ef8-fb031a9567a4",
+            "apiVersion": "0.1",
+            "productVersion": "4.0.1a-33027",
+            "modelNumber": " HX240C-M4SX,HX240C-M4SX",
+            "serialNumber": "RK63,RK64,RK65,RK83",
+            "name": "HyperFlex StorageController",
+            "fullName": " HyperFlex StorageController 4.0.1a",
+            "build": "4.0.1a-33027 (simulator)",
+            "locale": "English (United States)",
+            "serviceType": "stMgr",
+            "displayVersion": "4.0(1a)",
+            "setInstanceUuid": true,
+            "setApiVersion": true,
+            "setProductVersion": true,
+            "setModelNumber": true,
+            "setSerialNumber": true,
+            "setName": true,
+            "setFullName": true,
+            "setBuild": true,
+            "setLocale": true,
+            "setServiceType": true,
+            "setDisplayVersion": true,
+            "setPid": false,
+            "setHypervisor": false,
+            "setUpdateVersion": false
+        },
+        "cluster": {
+            "entityRef": {
+                "id": "4906b9a99af14f82:710704fce56a985c",
+                "type": "CLUSTER",
+                "confignum": 0,
+                "setId": true,
+                "setName": false,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            "config": {
+                "ip": "192.168.0.100",
+                "size": 4,
+                "clusterUuid": "4906b9a99af14f82:710704fce56a985c",
+                "dataReplicationFactor": "TWO_COPIES",
+                "clusterAccessPolicy": "LENIENT",
+                "zoneType": "UNKNOWN",
+                "numZones": 0,
+                "clusterType": "DEFAULT_CLUSTER",
+                "setIp": true,
+                "setSize": true,
+                "setClusterUuid": true,
+                "setDataReplicationFactor": true,
+                "setClusterAccessPolicy": true,
+                "setWorkloadType": false,
+                "setZoneType": true,
+                "setNumZones": false,
+                "setClusterType": true
+            },
+            "state": "ONLINE",
+            "healthState": "HEALTHY",
+            "boottime": 1557311960,
+            "rawCapacity": 8092343840276,
+            "capacity": 4046171920138,
+            "usedCapacity": 100529078272,
+            "freeCapacity": 3945642841866,
+            "nodes": [
+                {
+                    "id": "3c008b18564db10d:acd76078186f6cf1",
+                    "type": "PNODE",
+                    "name": "192.168.0.51",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "54eafd48564dc8df:92010d21fda4ca54",
+                    "type": "PNODE",
+                    "name": "192.168.0.52",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "b1aa07b9564d4ea1:c9146e74e54ba02d",
+                    "type": "PNODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "f6a11ef0564d28a6:0801fafc31f8b044",
+                    "type": "PNODE",
+                    "name": "192.168.0.53",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                }
+            ],
+            "compliance": "COMPLIANT",
+            "resiliencyDetails": {
+                "CACHE_COPIES_REMAINING": "2",
+                "HDD_FAILURES_TOLERABLE": "1",
+                "SSD_FAILURES_TO_READONLY": "NA",
+                "METADATA_COPIES_REMAINING": "3",
+                "HEALTH_REASON": "Storage cluster is healthy. \n",
+                "SSD_FAILURES_TO_SHUTDOWN": "2",
+                "NUM_NODES_UNAVAILABLE": "0",
+                "NODE_FAILURES_TO_ENOSPACE_WARN": "NA",
+                "DATA_COPIES_REMAINING": "2",
+                "NODE_FAILURES_TO_SHUTDOWN": "2",
+                "HDD_FAILURES_TO_SHUTDOWN": "3",
+                "NODE_FAILURES_TO_READONLY": "2",
+                "TIME_TO_FINISH_HEALING_IN_SECS": "",
+                "NODE_FAILURES_TOLERABLE": "1",
+                "HDD_FAILURES_TO_READONLY": "2",
+                "HEALING_STATUS": "",
+                "SSD_FAILURES_TOLERABLE": "1",
+                "ENSEMBLE_SIZE": "4"
+            },
+            "activeNodes": 4,
+            "uptime": 2325,
+            "downtime": 0,
+            "resiliencyInfo": {
+                "state": "HEALTHY",
+                "nodeFailuresTolerable": 1,
+                "ssdFailuresTolerable": 1,
+                "hddFailuresTolerable": 1,
+                "messages": [
+                    "Storage cluster is healthy. "
+                ],
+                "setNodeFailuresTolerable": true,
+                "setSsdFailuresTolerable": true,
+                "setHddFailuresTolerable": true,
+                "messagesSize": 1,
+                "messagesIterator": [
+                    "Storage cluster is healthy. "
+                ],
+                "setMessages": true,
+                "zoneResInfoListSize": 0,
+                "setZoneResInfoList": false,
+                "setState": true
+            },
+            "healingInfo": {
+                "inProgress": false,
+                "estimatedCompletionTimeInSeconds": 0,
+                "percentComplete": 0,
+                "messagesSize": 0,
+                "setMessages": false,
+                "setInProgress": true,
+                "setEstimatedCompletionTimeInSeconds": false,
+                "setPercentComplete": false
+            },
+            "allFlash": false,
+            "setEntityRef": true,
+            "setHealthState": true,
+            "setBoottime": true,
+            "setRawCapacity": true,
+            "setCapacity": true,
+            "setUsedCapacity": true,
+            "setFreeCapacity": true,
+            "setCompliance": true,
+            "resiliencyDetailsSize": 18,
+            "setResiliencyDetails": true,
+            "setActiveNodes": true,
+            "setUptime": true,
+            "setDowntime": true,
+            "setResiliencyInfo": true,
+            "setHealingInfo": true,
+            "setAllFlash": true,
+            "nodesSize": 4,
+            "setNodes": true,
+            "nodesIterator": [
+                {
+                    "id": "3c008b18564db10d:acd76078186f6cf1",
+                    "type": "PNODE",
+                    "name": "192.168.0.51",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "54eafd48564dc8df:92010d21fda4ca54",
+                    "type": "PNODE",
+                    "name": "192.168.0.52",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "b1aa07b9564d4ea1:c9146e74e54ba02d",
+                    "type": "PNODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "f6a11ef0564d28a6:0801fafc31f8b044",
+                    "type": "PNODE",
+                    "name": "192.168.0.53",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                }
+            ],
+            "setConfig": true,
+            "setState": true
+        },
+        "vCluster": {
+            "entityRef": {
+                "id": "domain-c47",
+                "type": "VIRTCLUSTER",
+                "name": "hx-cluster-a",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            "state": "ONLINE",
+            "boottime": 0,
+            "virtNodes": [
+                {
+                    "id": "4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                }
+            ],
+            "virtDatastores": [],
+            "vCenterUrl": "https://vc1.dcloud.cisco.com",
+            "setEntityRef": true,
+            "setBoottime": true,
+            "vcenterUrl": "https://vc1.dcloud.cisco.com",
+            "setVCenterUrl": true,
+            "setState": true,
+            "virtNodesSize": 4,
+            "virtNodesIterator": [
+                {
+                    "id": "4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                }
+            ],
+            "setVirtNodes": true,
+            "virtDatastoresSize": 0,
+            "virtDatastoresIterator": [],
+            "setVirtDatastores": true
+        },
+        "progress": [
+            {
+                "name": "Node disk summary: 4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                    "type": "NODE",
+                    "name": "192.168.0.53",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "isValidation": false,
+                "setEntity": true,
+                "setCompletion": true,
+                "setParent": false,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": false,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Node disk summary: 42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                    "type": "NODE",
+                    "name": "192.168.0.51",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "isValidation": false,
+                "setEntity": true,
+                "setCompletion": true,
+                "setParent": false,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": false,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdd",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c29b81c6c778:1ad36cd79ccca83a",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdd",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdd",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Node disk summary: 4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                    "type": "NODE",
+                    "name": "192.168.0.52",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "isValidation": false,
+                "setEntity": true,
+                "setCompletion": true,
+                "setParent": false,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": false,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdg",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c2961375e70e:bd9ea5ed1b18094d",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Ignored ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdg",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Ignored ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdg",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sda",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c2954c9597e2:37d78c4cde218863",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Ignored ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "solid state drive ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sda",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Ignored ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "solid state drive ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sda",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sde",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c29d0dbe05d0:5b099eeef5b3c8bf",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sde",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sde",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdb",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c2979a90dc0c:23b3536c93a9ebab",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "solid state drive ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdb",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "solid state drive ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdb",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdc",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c29d5301202d:64f66c031ed3a378",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdc",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdc",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Node disk summary: 42170689-171a-8441-29ce-5a7dd71de9ab",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "isValidation": false,
+                "setEntity": true,
+                "setCompletion": true,
+                "setParent": false,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": false,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdf",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c29e07df7bea:2c5cb8316c29cd47",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdf",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdf",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            }
+        ],
+        "upgradeState": "OK",
+        "setEntityRef": true,
+        "setMessage": false,
+        "setConfig": true,
+        "setState": true,
+        "stNodesSize": 4,
+        "stNodesIterator": [
+            {
+                "id": "42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                "type": "NODE",
+                "name": "hx-a-1",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            {
+                "id": "4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                "type": "NODE",
+                "name": "hx-a-3",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            {
+                "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                "type": "NODE",
+                "name": "hx-a-4",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            {
+                "id": "4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                "type": "NODE",
+                "name": "hx-a-2",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            }
+        ],
+        "setStNodes": true,
+        "setAbout": true,
+        "setCluster": true,
+        "vcluster": {
+            "entityRef": {
+                "id": "domain-c47",
+                "type": "VIRTCLUSTER",
+                "name": "hx-cluster-a",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            "state": "ONLINE",
+            "boottime": 0,
+            "virtNodes": [
+                {
+                    "id": "4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                }
+            ],
+            "virtDatastores": [],
+            "vCenterUrl": "https://vc1.dcloud.cisco.com",
+            "setEntityRef": true,
+            "setBoottime": true,
+            "vcenterUrl": "https://vc1.dcloud.cisco.com",
+            "setVCenterUrl": true,
+            "setState": true,
+            "virtNodesSize": 4,
+            "virtNodesIterator": [
+                {
+                    "id": "4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                {
+                    "id": "4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                    "type": "VIRTNODE",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                }
+            ],
+            "setVirtNodes": true,
+            "virtDatastoresSize": 0,
+            "virtDatastoresIterator": [],
+            "setVirtDatastores": true
+        },
+        "setVCluster": true,
+        "progressSize": 11,
+        "progressIterator": [
+            {
+                "name": "Node disk summary: 4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "4217ec58-cbe2-c3bf-41e9-d9de43dc98a7",
+                    "type": "NODE",
+                    "name": "192.168.0.53",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "isValidation": false,
+                "setEntity": true,
+                "setCompletion": true,
+                "setParent": false,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": false,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Node disk summary: 42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "42173e6a-e769-d153-318d-a0f6e7c91e7b",
+                    "type": "NODE",
+                    "name": "192.168.0.51",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "isValidation": false,
+                "setEntity": true,
+                "setCompletion": true,
+                "setParent": false,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": false,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdd",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c29b81c6c778:1ad36cd79ccca83a",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdd",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdd",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Node disk summary: 4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "4217a3dc-fba5-7649-17bc-c37dd3305f6f",
+                    "type": "NODE",
+                    "name": "192.168.0.52",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "isValidation": false,
+                "setEntity": true,
+                "setCompletion": true,
+                "setParent": false,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": false,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdg",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c2961375e70e:bd9ea5ed1b18094d",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Ignored ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdg",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Ignored ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdg",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sda",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c2954c9597e2:37d78c4cde218863",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Ignored ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "solid state drive ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sda",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Ignored ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "solid state drive ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sda",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sde",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c29d0dbe05d0:5b099eeef5b3c8bf",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sde",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sde",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdb",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c2979a90dc0c:23b3536c93a9ebab",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "solid state drive ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdb",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "solid state drive ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdb",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdc",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c29d5301202d:64f66c031ed3a378",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdc",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdc",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Node disk summary: 42170689-171a-8441-29ce-5a7dd71de9ab",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "isValidation": false,
+                "setEntity": true,
+                "setCompletion": true,
+                "setParent": false,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": false,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            },
+            {
+                "name": "Disk Prepare /dev/sdf",
+                "state": "INPROGRESS",
+                "entity": {
+                    "id": "6000c29e07df7bea:2c5cb8316c29cd47",
+                    "type": "DISK",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": false,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "completion": 0,
+                "parent": {
+                    "id": "42170689-171a-8441-29ce-5a7dd71de9ab",
+                    "type": "NODE",
+                    "name": "192.168.0.54",
+                    "confignum": 0,
+                    "setId": true,
+                    "setName": true,
+                    "setType": true,
+                    "setIdtype": false,
+                    "setConfignum": false
+                },
+                "isValidation": false,
+                "lcDescription": {
+                    "msgid": "Disk Prepare %s %s %s %s",
+                    "msgstr": "Disk Prepare %s %s %s %s",
+                    "params": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdf",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setMsgid": true,
+                    "setMsgid_plural": false,
+                    "setMsgctxt": false,
+                    "setMsgstr": true,
+                    "paramsSize": 4,
+                    "paramsIterator": [
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "Used ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "magnetic disk ",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        },
+                        {
+                            "position": 0,
+                            "ltype": "STRING",
+                            "key": "",
+                            "value": "/dev/sdf",
+                            "setPosition": true,
+                            "setLtype": true,
+                            "setKey": true,
+                            "setValue": true
+                        }
+                    ],
+                    "setParams": true
+                },
+                "setEntity": true,
+                "setCompletion": false,
+                "setParent": true,
+                "setIsValidation": false,
+                "setDescription": false,
+                "setLcDescription": true,
+                "setFault": false,
+                "setName": true,
+                "setState": true
+            }
+        ],
+        "setProgress": true,
+        "setUpgradeState": true,
+        "setUpgradeVersion": false,
+        "setWitnessState": false,
+        "setArbitrationServiceState": false
+    }
+]

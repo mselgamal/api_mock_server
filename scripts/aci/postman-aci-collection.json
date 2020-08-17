@@ -1,0 +1,3832 @@
+{
+	"info": {
+		"_postman_id": "ed134023-690e-4de7-be85-e75c4da82131",
+		"name": "ACI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"aaaUser\": {\n        \"attributes\": {\n            \"name\": \"{{user}}\",\n            \"pwd\": \"{{password}}\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/aaaLogin.json?gui-token-request=yes",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"aaaLogin.json"
+					],
+					"query": [
+						{
+							"key": "gui-token-request",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/fabricPod.json",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "NwMAAAAAAAAAAAAAAAAAAGzc6MUJD6yecN3H7VHc26RTcXcXJZuj+iUS3Pa8p7CFjeUo+bvIc4uMaTOWd6uBVLdlQ9QDgyjcRdtt+aAELF5HFy+vQe3W/jRoh9gRpEmufdXuQoTrilZxvz52lLv++OGc7MBeD4DwupvrIHXqNj8V2ci5AdOOIzr788DtO3BvAopOBsZMG1pnggHS1iVSLw==",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/fabricPod.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"fabricPod.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1.json?target-subtree-class=fabricNode&rsp-subtree-include=count&query-target-filter=eq(fabricNode.role,\"controller\")&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1.json?target-subtree-class=fabricNode&rsp-subtree-include=count&query-target-filter=eq(fabricNode.role,\"controller\")&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fabricNode"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "count"
+						},
+						{
+							"key": "query-target-filter",
+							"value": "eq(fabricNode.role,\"controller\")"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1.json?target-subtree-class=fabricNode&rsp-subtree-include=count&query-target-filter=eq(fabricNode.role,\"spine\")&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1.json?target-subtree-class=fabricNode&rsp-subtree-include=count&query-target-filter=eq(fabricNode.role,\"spine\")&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fabricNode"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "count"
+						},
+						{
+							"key": "query-target-filter",
+							"value": "eq(fabricNode.role,\"spine\")"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1.json?target-subtree-class=fabricNode&rsp-subtree-include=count&query-target-filter=eq(fabricNode.role,\"leaf\")&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1.json?target-subtree-class=fabricNode&rsp-subtree-include=count&query-target-filter=eq(fabricNode.role,\"leaf\")&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fabricNode"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "count"
+						},
+						{
+							"key": "query-target-filter",
+							"value": "eq(fabricNode.role,\"leaf\")"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/fvTenant.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/fvTenant.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"fvTenant.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/aaaSystemUser.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/aaaSystemUser.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"aaaSystemUser.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/aaaSessionLR.json?query-target-filter=gt(aaaSessionLR.created,\"2020-08-10T20:58:14.834783\")&order-by=aaaSessionLR.created|asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/aaaSessionLR.json?query-target-filter=gt(aaaSessionLR.created,\"2020-08-10T20:40:21.00\")&order-by=aaaSessionLR.created|asc",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"aaaSessionLR.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "gt(aaaSessionLR.created,\"2020-08-10T20:40:21.00\")"
+						},
+						{
+							"key": "order-by",
+							"value": "aaaSessionLR.created|asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/fabric/compcat-default/fvsw-default/capabilities.json?target-subtree-class=fvcapRule&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/fabric/compcat-default/fvsw-default/capabilities.json?target-subtree-class=fvcapRule&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"fabric",
+						"compcat-default",
+						"fvsw-default",
+						"capabilities.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fvcapRule"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/fltCnts.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/fltCnts.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"fltCnts.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/faultInst.json?query-target-filter=and(gt(faultInst.lastTransition,\"2020-08-10T22:10:46.084\"),or(eq(faultInst.lc,\"raised\"),eq(faultInst.lc,\"retaining\"),eq(faultInst.lc,\"raised-clearing\")))&order-by=faultInst.lastTransition",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/faultInst.json?query-target-filter=and(gt(faultInst.lastTransition,\"2020-08-11T21:31:18.881\"),or(eq(faultInst.lc,\"raised\"),eq(faultInst.lc,\"retaining\"),eq(faultInst.lc,\"raised-clearing\")))&order-by=faultInst.lastTransition|asc",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"faultInst.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "and(gt(faultInst.lastTransition,\"2020-08-11T21:31:18.881\"),or(eq(faultInst.lc,\"raised\"),eq(faultInst.lc,\"retaining\"),eq(faultInst.lc,\"raised-clearing\")))"
+						},
+						{
+							"key": "order-by",
+							"value": "faultInst.lastTransition|asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/compHv.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/compHv.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"compHv.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/compVm.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/compVm.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"compVm.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/fabricNode.json?rsp-subtree-include=count&query-target-filter=eq(fabricNode.role,+\"spine\")",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/fabricNode.json?rsp-subtree-include=count&query-target-filter=eq(fabricNode.role,+\"spine\")",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"fabricNode.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "count"
+						},
+						{
+							"key": "query-target-filter",
+							"value": "eq(fabricNode.role,+\"spine\")"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/aaaModLR.json?query-target-filter=and(gt(aaaModLR.created,\"2020-08-10T20:40:21.00\"))",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/aaaModLR.json?query-target-filter=and(gt(aaaModLR.created,\"2020-08-10T20:40:21.00\"))",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"aaaModLR.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "and(gt(aaaModLR.created,\"2020-08-10T20:40:21.00\"))"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/eqptcapacityEntity.json?rsp-subtree-class=eqptcapacityMcastUsage5min,eqptcapacityL3UsageCap5min,eqptcapacityL3Usage5min,eqptcapacityL2Usage5min,eqptcapacityVlanUsage5min,eqptcapacityPolUsage5min&rsp-subtree-include=stats&q",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/eqptcapacityEntity.json?rsp-subtree-class=eqptcapacityMcastUsage5min,eqptcapacityL3UsageCap5min,eqptcapacityL3Usage5min,eqptcapacityL2Usage5min,eqptcapacityVlanUsage5min,eqptcapacityPolUsage5min&rsp-subtree-include=stats&query-target=self",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"eqptcapacityEntity.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-class",
+							"value": "eqptcapacityMcastUsage5min,eqptcapacityL3UsageCap5min,eqptcapacityL3Usage5min,eqptcapacityL2Usage5min,eqptcapacityVlanUsage5min,eqptcapacityPolUsage5min"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "stats"
+						},
+						{
+							"key": "query-target",
+							"value": "self"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-common/fltCnts.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-common/fltCnts.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-common",
+						"fltCnts.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&rsp-subtree-include=health&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&rsp-subtree-include=health&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-common.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvCtx"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsGraph"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsNode"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsCDev"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=fvAp&rsp-subtree-include=health&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=fvAp&rsp-subtree-include=health&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-common.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fvAp"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=vnsLDevVip&rsp-subtree-include=health&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=vnsLDevVip&rsp-subtree-include=health&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-common.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=fvBD&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=fvBD&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-common.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=vzBrCP&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=vzBrCP&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-common.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-common.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-common.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvCtx"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsGraph"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsNode"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsCDev"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-common/health.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-common/health.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-common",
+						"health.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-infra/fltCnts.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-infra/fltCnts.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-infra",
+						"fltCnts.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&rsp-subtree-include=health&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&rsp-subtree-include=health&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-infra.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvCtx"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsGraph"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsNode"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsCDev"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=fvAp&rsp-subtree-include=health&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=fvAp&rsp-subtree-include=health&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-infra.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fvAp"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=vnsLDevVip&rsp-subtree-include=health&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=vnsLDevVip&rsp-subtree-include=health&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-infra.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=fvBD&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=fvBD&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-infra.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=vzBrCP&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=vzBrCP&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-infra.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-infra.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-infra.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvCtx"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsGraph"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsNode"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsCDev"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-infra/health.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-infra/health.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-infra",
+						"health.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-Brownfield/fltCnts.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-Brownfield/fltCnts.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Brownfield",
+						"fltCnts.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&rsp-subtree-include=health&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&rsp-subtree-include=health&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Brownfield.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvCtx"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsGraph"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsNode"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsCDev"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=fvAp&rsp-subtree-include=health&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=fvAp&rsp-subtree-include=health&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Brownfield.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fvAp"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=vnsLDevVip&rsp-subtree-include=health&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=vnsLDevVip&rsp-subtree-include=health&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Brownfield.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=fvBD&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=fvBD&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Brownfield.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=vzBrCP&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=vzBrCP&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Brownfield.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-Brownfield.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Brownfield.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvCtx"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsGraph"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsNode"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsCDev"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-Brownfield/health.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-Brownfield/health.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-Brownfield",
+						"health.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-mgmt/fltCnts.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-mgmt/fltCnts.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-mgmt",
+						"fltCnts.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&rsp-subtree-include=health&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&rsp-subtree-include=health&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-mgmt.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvCtx"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsGraph"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsNode"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsCDev"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=fvAp&rsp-subtree-include=health&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=fvAp&rsp-subtree-include=health&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-mgmt.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fvAp"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=vnsLDevVip&rsp-subtree-include=health&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=vnsLDevVip&rsp-subtree-include=health&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-mgmt.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=vzBrCP&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=vzBrCP&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-mgmt.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=fvBD&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=fvBD&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-mgmt.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&query-target=subtree ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-mgmt.json?target-subtree-class=vzBrCP&target-subtree-class=fvBD&target-subtree-class=fvCtx&target-subtree-class=vnsAbsGraph&target-subtree-class=vnsAbsNode&target-subtree-class=vnsLDevVip&target-subtree-class=vnsCDev&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-mgmt.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "vzBrCP"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvBD"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "fvCtx"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsGraph"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsAbsNode"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsLDevVip"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "vnsCDev"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/uni/tn-mgmt/health.json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/uni/tn-mgmt/health.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni",
+						"tn-mgmt",
+						"health.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/fltCnts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/fltCnts.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"fltCnts.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/dbgAcTrail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/dbgAcTrail.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"dbgAcTrail.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1.json?target-subtree-class=fabricNode&query-target-filter=eq(fabricNode.role,+\"controller\")&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1.json?target-subtree-class=fabricNode&query-target-filter=eq(fabricNode.role,+\"controller\")&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "fabricNode"
+						},
+						{
+							"key": "query-target-filter",
+							"value": "eq(fabricNode.role,+\"controller\")"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2.json?target-subtree-class=topSystem&target-subtree-class=infraWiNode&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2.json?target-subtree-class=topSystem&target-subtree-class=infraWiNode&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "topSystem"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "infraWiNode"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3.json?target-subtree-class=topSystem&target-subtree-class=infraWiNode&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3.json?target-subtree-class=topSystem&target-subtree-class=infraWiNode&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "topSystem"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "infraWiNode"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1.json?target-subtree-class=topSystem&target-subtree-class=infraWiNode&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1.json?target-subtree-class=topSystem&target-subtree-class=infraWiNode&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "topSystem"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "infraWiNode"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/health.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"health.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/health.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"health.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/fabricNode.json?query-target-filter=eq(fabricNode.role,+\"leaf\")",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/fabricNode.json?query-target-filter=eq(fabricNode.role,+\"leaf\")",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"fabricNode.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "eq(fabricNode.role,+\"leaf\")"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/topSystem.json?rsp-subtree-include=health&query-target-filter=eq(topSystem.role,+\"leaf\")",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/topSystem.json?rsp-subtree-include=health&query-target-filter=eq(topSystem.role,+\"leaf\")",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"topSystem.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target-filter",
+							"value": "eq(topSystem.role,+\"leaf\")"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/dhcpClient.json?query-target-filter=eq(dhcpClient.nodeRole,+\"leaf\")",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/dhcpClient.json?query-target-filter=eq(dhcpClient.nodeRole,+\"leaf\")",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"dhcpClient.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "eq(dhcpClient.nodeRole,+\"leaf\")"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/fabricNode.json?query-target-filter=eq(fabricNode.role,+\"spine\")",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/fabricNode.json?query-target-filter=eq(fabricNode.role,+\"spine\")",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"fabricNode.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "eq(fabricNode.role,+\"spine\")"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/topSystem.json?rsp-subtree-include=health&query-target-filter=eq(topSystem.role,+\"spine\")",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/topSystem.json?rsp-subtree-include=health&query-target-filter=eq(topSystem.role,+\"spine\")",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"topSystem.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "health"
+						},
+						{
+							"key": "query-target-filter",
+							"value": "eq(topSystem.role,+\"spine\")"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/dhcpClient.json?query-target-filter=eq(dhcpClient.nodeRole,+\"spine\")",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/dhcpClient.json?query-target-filter=eq(dhcpClient.nodeRole,+\"spine\")",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"dhcpClient.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "eq(dhcpClient.nodeRole,+\"spine\")"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc/CDprocMem5min",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc/CDprocMem5min.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"proc",
+						"CDprocMem5min.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"proc.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc/CDprocCPU5min",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc/CDprocCPU5min.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"proc",
+						"CDprocCPU5min.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/fltCnts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/fltCnts.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"fltCnts.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/av/node-1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/av/node-1.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"av",
+						"node-1.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/ctrlrfwstatuscont/ctrlrrunning",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/ctrlrfwstatuscont/ctrlrrunning.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"ctrlrfwstatuscont",
+						"ctrlrrunning.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1?target-subtree-class=tagInst&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1.json?target-subtree-class=tagInst&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "tagInst"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/ch/bslot/board?target-subtree-class=eqptCPU&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/ch/bslot/board.json?target-subtree-class=eqptCPU&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"ch",
+						"bslot",
+						"board.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "eqptCPU"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"proc.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/ch?target-subtree-class=eqptFan&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/ch.json?target-subtree-class=eqptFan&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"ch.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "eqptFan"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/ch?target-subtree-class=eqptStorage&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/ch.json?target-subtree-class=eqptStorage&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"ch.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "eqptStorage"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc?query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/proc.json?query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"proc.json"
+					],
+					"query": [
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2/sys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2/sys.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2",
+						"sys.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2/av/node-2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2/av/node-2.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2",
+						"av",
+						"node-2.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2/sys/ctrlrfwstatuscont/ctrlrrunning",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2/sys/ctrlrfwstatuscont/ctrlrrunning.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2",
+						"sys",
+						"ctrlrfwstatuscont",
+						"ctrlrrunning.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2?target-subtree-class=tagInst&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2.json?target-subtree-class=tagInst&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "tagInst"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2/sys/ch/bslot/board?target-subtree-class=eqptCPU&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2/sys/ch/bslot/board.json?target-subtree-class=eqptCPU&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2",
+						"sys",
+						"ch",
+						"bslot",
+						"board.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "eqptCPU"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2/sys/proc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2/sys/proc.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2",
+						"sys",
+						"proc.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2/sys/ch?target-subtree-class=eqptFan&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2/sys/ch.json?target-subtree-class=eqptFan&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2",
+						"sys",
+						"ch.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "eqptFan"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2/sys/ch?target-subtree-class=eqptStorage&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2/sys/ch.json?target-subtree-class=eqptStorage&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2",
+						"sys",
+						"ch.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "eqptStorage"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys/proc?query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys/proc.json?query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys",
+						"proc.json"
+					],
+					"query": [
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/av/node-3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/av/node-3.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"av",
+						"node-3.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys/ctrlrfwstatuscont/ctrlrrunning",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys/ctrlrfwstatuscont/ctrlrrunning.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys",
+						"ctrlrfwstatuscont",
+						"ctrlrrunning.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3?target-subtree-class=tagInst&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3.json?target-subtree-class=tagInst&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "tagInst"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys/ch/bslot/board?target-subtree-class=eqptCPU&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys/ch/bslot/board.json?target-subtree-class=eqptCPU&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys",
+						"ch",
+						"bslot",
+						"board.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "eqptCPU"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys/proc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys/proc.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys",
+						"proc.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys/ch?target-subtree-class=eqptFan&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys/ch.json?target-subtree-class=eqptFan&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys",
+						"ch.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "eqptFan"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys/ch?target-subtree-class=eqptStorage&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys/ch.json?target-subtree-class=eqptStorage&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys",
+						"ch.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "eqptStorage"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys/proc?query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys/proc.json?query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys",
+						"proc.json"
+					],
+					"query": [
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1.json?target-subtree-class=cnwPhysIf&target-subtree-class=cnwAggrIf&target-subtree-class=l3EncRtdIf&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1.json?target-subtree-class=cnwPhysIf&target-subtree-class=cnwAggrIf&target-subtree-class=l3EncRtdIf&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "cnwPhysIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "cnwAggrIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "l3EncRtdIf"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/caggr-[po1.1]?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/caggr-[po1.1].json?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"caggr-[po1.1].json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsActiveIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsMbrIfs"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-1/sys/caggr-[po1]?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-1/sys/caggr-[po1].json?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-1",
+						"sys",
+						"caggr-[po1].json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsActiveIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsMbrIfs"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2.json?target-subtree-class=cnwPhysIf&target-subtree-class=cnwAggrIf&target-subtree-class=l3EncRtdIf&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2.json?target-subtree-class=cnwPhysIf&target-subtree-class=cnwAggrIf&target-subtree-class=l3EncRtdIf&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "cnwPhysIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "cnwAggrIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "l3EncRtdIf"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2/sys/caggr-[po1.1]?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2/sys/caggr-[po1.1].json?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2",
+						"sys",
+						"caggr-[po1.1].json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsActiveIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsMbrIfs"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-2/sys/caggr-[po1]?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-2/sys/caggr-[po1].json?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-2",
+						"sys",
+						"caggr-[po1].json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsActiveIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsMbrIfs"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3.json?target-subtree-class=cnwPhysIf&target-subtree-class=cnwAggrIf&target-subtree-class=l3EncRtdIf&query-target=subtree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3.json?target-subtree-class=cnwPhysIf&target-subtree-class=cnwAggrIf&target-subtree-class=l3EncRtdIf&query-target=subtree",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3.json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "cnwPhysIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "cnwAggrIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "l3EncRtdIf"
+						},
+						{
+							"key": "query-target",
+							"value": "subtree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys/caggr-[po1.1]?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys/caggr-[po1.1].json?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys",
+						"caggr-[po1.1].json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsActiveIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsMbrIfs"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-3/sys/caggr-[po1]?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-3/sys/caggr-[po1].json?target-subtree-class=cnwRsActiveIf&target-subtree-class=cnwRsMbrIfs&query-target=children",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-3",
+						"sys",
+						"caggr-[po1].json"
+					],
+					"query": [
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsActiveIf"
+						},
+						{
+							"key": "target-subtree-class",
+							"value": "cnwRsMbrIfs"
+						},
+						{
+							"key": "query-target",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/procEntry.json?rsp-subtree-class=procCPU5min&rsp-subtree-class=procMem5min&rsp-subtree=children&rsp-subtree-include=stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/procEntry.json?rsp-subtree-class=procCPU5min&rsp-subtree-class=procMem5min&rsp-subtree=children&rsp-subtree-include=stats",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"procEntry.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-class",
+							"value": "procCPU5min"
+						},
+						{
+							"key": "rsp-subtree-class",
+							"value": "procMem5min"
+						},
+						{
+							"key": "rsp-subtree",
+							"value": "children"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "stats"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/eqptFruPower5min?rsp-subtree-include=stats&query-target=self",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/eqptFruPower5min.json?rsp-subtree-include=stats&query-target=self",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"eqptFruPower5min.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "stats"
+						},
+						{
+							"key": "query-target",
+							"value": "self"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-101/sys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-101/sys.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-101",
+						"sys.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-102/sys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-102/sys.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-102",
+						"sys.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-103/sys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-103/sys.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-103",
+						"sys.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/mo/topology/pod-1/node-104/sys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/mo/topology/pod-1/node-104/sys.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"mo",
+						"topology",
+						"pod-1",
+						"node-104",
+						"sys.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/fabricNode?query-target-filter=or(eq(fabricNode.role,\"leaf\"),eq(fabricNode.role,\"spine\"))",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/fabricNode.json?query-target-filter=or(eq(fabricNode.role,\"leaf\"),eq(fabricNode.role,\"spine\"))",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"fabricNode.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "or(eq(fabricNode.role,\"leaf\"),eq(fabricNode.role,\"spine\"))"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/topSystem?query-target-filter=or(eq(topSystem.role,\"leaf\"),eq(topSystem.role,\"spine\"))",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/topSystem.json?query-target-filter=or(eq(topSystem.role,\"leaf\"),eq(topSystem.role,\"spine\"))",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"topSystem.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "or(eq(topSystem.role,\"leaf\"),eq(topSystem.role,\"spine\"))"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/firmwareRunning?query-target-filter=eq(firmwareRunning.type,\"switch\")",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/firmwareRunning.json?query-target-filter=eq(firmwareRunning.type,\"switch\")",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"firmwareRunning.json"
+					],
+					"query": [
+						{
+							"key": "query-target-filter",
+							"value": "eq(firmwareRunning.type,\"switch\")"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/eqptSupC?rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/eqptSupC.json?rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"eqptSupC.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/eqptLC?rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/eqptLC.json?rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"eqptLC.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/eqptFC?rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/eqptFC.json?rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"eqptFC.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/eqptSysC?rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/eqptSysC.json?rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"eqptSysC.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/eqptPsu?rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/eqptPsu.json?rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"eqptPsu.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/eqptFt?rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/eqptFt.json?rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"eqptFt.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/l3EncRtdIf.json?rsp-subtree-class=ethpmEncRtdIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/l3EncRtdIf.json?rsp-subtree-class=ethpmEncRtdIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"l3EncRtdIf.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-class",
+							"value": "ethpmEncRtdIf"
+						},
+						{
+							"key": "rsp-subtree",
+							"value": "children"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/mgmtMgmtIf.json?rsp-subtree-class=imMgmtIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/mgmtMgmtIf.json?rsp-subtree-class=imMgmtIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"mgmtMgmtIf.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-class",
+							"value": "imMgmtIf"
+						},
+						{
+							"key": "rsp-subtree",
+							"value": "children"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/l1PhysIf.json?rsp-subtree-class=ethpmPhysIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/l1PhysIf.json?rsp-subtree-class=ethpmPhysIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"l1PhysIf.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-class",
+							"value": "ethpmPhysIf"
+						},
+						{
+							"key": "rsp-subtree",
+							"value": "children"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/l3LbRtdIf.json?rsp-subtree-class=ethpmLbRtdIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/l3LbRtdIf.json?rsp-subtree-class=ethpmLbRtdIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"l3LbRtdIf.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-class",
+							"value": "ethpmLbRtdIf"
+						},
+						{
+							"key": "rsp-subtree",
+							"value": "children"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/sviIf.json?rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/sviIf.json?rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"sviIf.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/tunnelIf.json?rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/tunnelIf.json?rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"tunnelIf.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/vpcDom.json?rsp-subtree-class=vpcIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/vpcDom.json?rsp-subtree-class=vpcIf&rsp-subtree=children&rsp-subtree-include=fault-count,health",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"vpcDom.json"
+					],
+					"query": [
+						{
+							"key": "rsp-subtree-class",
+							"value": "vpcIf"
+						},
+						{
+							"key": "rsp-subtree",
+							"value": "children"
+						},
+						{
+							"key": "rsp-subtree-include",
+							"value": "fault-count,health"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/api/class/hvsAdj",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/class/hvsAdj.json",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"class",
+						"hvsAdj.json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "72dc44d0-7692-4448-a9c9-52db3485abbd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0cefad83-9da3-4158-8c3b-085fdd61feeb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7860cb51-a50c-41cb-aebb-ebeafcc74f91",
+			"key": "host",
+			"value": "https://198.18.133.200"
+		},
+		{
+			"id": "5dc9d534-625a-476d-8923-6baedc2ccb46",
+			"key": "user",
+			"value": "admin"
+		},
+		{
+			"id": "8674f862-f2d7-4c91-9f8f-18ce23fbfc5d",
+			"key": "password",
+			"value": "C1sco12345"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

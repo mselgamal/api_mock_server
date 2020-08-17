@@ -1,0 +1,280 @@
+[
+    {
+        "entityRef": {
+            "id": "0000000006ce0351:00000000000100fc",
+            "type": "DATASTORE",
+            "name": "hx-a-ds1",
+            "confignum": 0,
+            "setId": true,
+            "setName": true,
+            "setType": true,
+            "setIdtype": false,
+            "setConfignum": false
+        },
+        "stPlatDatastore": {
+            "entityRef": {
+                "id": "0000000006ce0351:00000000000100fc",
+                "type": "DATASTORE",
+                "name": "hx-a-ds1",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            "config": {
+                "name": "hx-a-ds1",
+                "capacity": 107374182400,
+                "numMirrors": 2,
+                "systemDatastore": false,
+                "numStripes": 0,
+                "dataBlockSize": 8192,
+                "siteIndex": 0,
+                "setNumMirrors": true,
+                "setSystemDatastore": true,
+                "setNumStripes": true,
+                "setDataBlockSize": true,
+                "setCapacity": true,
+                "setName": true,
+                "setSiteIndex": true
+            },
+            "creationTime": 1559654176,
+            "lastAccessTime": 1559654176,
+            "lastModifiedTime": 1559654176,
+            "totalCapacity": 107374182400,
+            "freeCapacity": 107269344371,
+            "unsharedUsedBytes": 104838029,
+            "unCompressedUsedBytes": 5790441472,
+            "setEntityRef": true,
+            "setParent": false,
+            "setFreeCapacity": true,
+            "setSite": false,
+            "setLastModifiedTime": true,
+            "setTotalCapacity": true,
+            "setCreationTime": true,
+            "setConfig": true,
+            "setLastAccessTime": true,
+            "setUnsharedUsedBytes": true,
+            "setUnCompressedUsedBytes": true
+        },
+        "virtDatastore": {
+            "entityRef": {
+                "id": "datastore-82",
+                "type": "VIRTDATASTORE",
+                "name": "hx-a-ds1",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            "url": "ds:///vmfs/volumes/4862d0e4-cacb2acb/",
+            "status": {
+                "EntityRef(id:4217a3dc-fba5-7649-17bc-c37dd3305f6f, type:VIRTNODE, name:hx-a-2.dcloud.cisco.com)": {
+                    "accessible": true,
+                    "mounted": true,
+                    "setAccessible": true,
+                    "setReasonInaccessible": false,
+                    "setMounted": true
+                },
+                "EntityRef(id:42173e6a-e769-d153-318d-a0f6e7c91e7b, type:VIRTNODE, name:hx-a-1.dcloud.cisco.com)": {
+                    "accessible": true,
+                    "mounted": true,
+                    "setAccessible": true,
+                    "setReasonInaccessible": false,
+                    "setMounted": true
+                },
+                "EntityRef(id:4217ec58-cbe2-c3bf-41e9-d9de43dc98a7, type:VIRTNODE, name:hx-a-3.dcloud.cisco.com)": {
+                    "accessible": true,
+                    "mounted": true,
+                    "setAccessible": true,
+                    "setReasonInaccessible": false,
+                    "setMounted": true
+                },
+                "EntityRef(id:42170689-171a-8441-29ce-5a7dd71de9ab, type:VIRTNODE, name:hx-a-4.dcloud.cisco.com)": {
+                    "accessible": true,
+                    "mounted": true,
+                    "setAccessible": true,
+                    "setReasonInaccessible": false,
+                    "setMounted": true
+                }
+            },
+            "mountSummary": "MOUNTED",
+            "accessibilitySummary": "ACCESSIBLE",
+            "mor": "datastore-82",
+            "setEntityRef": true,
+            "setStatus": true,
+            "setUrl": true,
+            "statusSize": 4,
+            "setMountSummary": true,
+            "setAccessibilitySummary": true,
+            "setMor": true
+        },
+        "replDatastore": {
+            "er": {
+                "id": "0000000006ce0351:00000000000100fc",
+                "type": "DATASTORE",
+                "name": "hx-a-ds1",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            "paired": false,
+            "replicationIntervalInMinutes": 0,
+            "storageOnly": false,
+            "setEr": true,
+            "setPaired": true,
+            "setDeviceState": false,
+            "setReplicationIntervalInMinutes": false,
+            "setStorageOnly": false
+        },
+        "setEntityRef": true,
+        "setStPlatDatastore": true,
+        "setVirtDatastore": true,
+        "setReplDatastore": true
+    },
+    {
+        "entityRef": {
+            "id": "0000000006ce0351:000000000001010b",
+            "type": "DATASTORE",
+            "name": "hx-a-ds2",
+            "confignum": 0,
+            "setId": true,
+            "setName": true,
+            "setType": true,
+            "setIdtype": false,
+            "setConfignum": false
+        },
+        "stPlatDatastore": {
+            "entityRef": {
+                "id": "0000000006ce0351:000000000001010b",
+                "type": "DATASTORE",
+                "name": "hx-a-ds2",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            "config": {
+                "name": "hx-a-ds2",
+                "capacity": 107374182400,
+                "numMirrors": 2,
+                "systemDatastore": false,
+                "numStripes": 0,
+                "dataBlockSize": 8192,
+                "siteIndex": 0,
+                "setNumMirrors": true,
+                "setSystemDatastore": true,
+                "setNumStripes": true,
+                "setDataBlockSize": true,
+                "setCapacity": true,
+                "setName": true,
+                "setSiteIndex": true
+            },
+            "creationTime": 1559654389,
+            "lastAccessTime": 1559654389,
+            "lastModifiedTime": 1559654389,
+            "totalCapacity": 107374182400,
+            "freeCapacity": 98783935117,
+            "unsharedUsedBytes": 8590247283,
+            "unCompressedUsedBytes": 1448517632,
+            "setEntityRef": true,
+            "setParent": false,
+            "setFreeCapacity": true,
+            "setSite": false,
+            "setLastModifiedTime": true,
+            "setTotalCapacity": true,
+            "setCreationTime": true,
+            "setConfig": true,
+            "setLastAccessTime": true,
+            "setUnsharedUsedBytes": true,
+            "setUnCompressedUsedBytes": true
+        },
+        "virtDatastore": {
+            "entityRef": {
+                "id": "datastore-361",
+                "type": "VIRTDATASTORE",
+                "name": "hx-a-ds2",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            "url": "ds:///vmfs/volumes/293011c5-cc96d80f/",
+            "status": {
+                "EntityRef(id:4217a3dc-fba5-7649-17bc-c37dd3305f6f, type:VIRTNODE, name:hx-a-2.dcloud.cisco.com)": {
+                    "accessible": true,
+                    "mounted": true,
+                    "setAccessible": true,
+                    "setReasonInaccessible": false,
+                    "setMounted": true
+                },
+                "EntityRef(id:42173e6a-e769-d153-318d-a0f6e7c91e7b, type:VIRTNODE, name:hx-a-1.dcloud.cisco.com)": {
+                    "accessible": true,
+                    "mounted": true,
+                    "setAccessible": true,
+                    "setReasonInaccessible": false,
+                    "setMounted": true
+                },
+                "EntityRef(id:4217ec58-cbe2-c3bf-41e9-d9de43dc98a7, type:VIRTNODE, name:hx-a-3.dcloud.cisco.com)": {
+                    "accessible": true,
+                    "mounted": true,
+                    "setAccessible": true,
+                    "setReasonInaccessible": false,
+                    "setMounted": true
+                },
+                "EntityRef(id:42170689-171a-8441-29ce-5a7dd71de9ab, type:VIRTNODE, name:hx-a-4.dcloud.cisco.com)": {
+                    "accessible": true,
+                    "mounted": true,
+                    "setAccessible": true,
+                    "setReasonInaccessible": false,
+                    "setMounted": true
+                }
+            },
+            "mountSummary": "MOUNTED",
+            "accessibilitySummary": "ACCESSIBLE",
+            "mor": "datastore-361",
+            "setEntityRef": true,
+            "setStatus": true,
+            "setUrl": true,
+            "statusSize": 4,
+            "setMountSummary": true,
+            "setAccessibilitySummary": true,
+            "setMor": true
+        },
+        "replDatastore": {
+            "er": {
+                "id": "0000000006ce0351:000000000001010b",
+                "type": "DATASTORE",
+                "name": "hx-a-ds2",
+                "confignum": 0,
+                "setId": true,
+                "setName": true,
+                "setType": true,
+                "setIdtype": false,
+                "setConfignum": false
+            },
+            "paired": false,
+            "replicationIntervalInMinutes": 0,
+            "storageOnly": false,
+            "setEr": true,
+            "setPaired": true,
+            "setDeviceState": false,
+            "setReplicationIntervalInMinutes": false,
+            "setStorageOnly": false
+        },
+        "setEntityRef": true,
+        "setStPlatDatastore": true,
+        "setVirtDatastore": true,
+        "setReplDatastore": true
+    }
+]
